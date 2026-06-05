@@ -38,8 +38,3 @@ abbr -a sr -- su -m root
 # usb
 abbr -a um -- udisksctl mount -b /dev/sdb1
 abbr -a uu -- udisksctl unmount -b /dev/sdb1
-
-# ssh — must stay as function (overrides built-in)
-function ssh --description ssh
-    TERM=xterm-256color /usr/bin/ssh $argv
-end
