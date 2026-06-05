@@ -22,7 +22,7 @@ function create_soft_link {
 }
 
 # $HOME/.config
-files=("alacritty" "fish" "sioyek" "swayimg")
+files=("alacritty" "fish" "niri" "sioyek" "swayimg" "waybar" "wallpapers")
 for file in "${files[@]}"
 do
   create_soft_link "$HOME/system" "$HOME/.config" "$file"
@@ -32,5 +32,5 @@ done
 create_soft_link "$HOME/system" "$HOME" ".gitconfig"
 
 # rime
-mkdir -p $HOME/.config/fcitx
-create_soft_link "$HOME/system" "$HOME/.config/fcitx" "rime"
+mkdir -p $HOME/.local/share/fcitx5
+create_soft_link "$HOME/system" "$HOME/.local/share/fcitx5" "rime"

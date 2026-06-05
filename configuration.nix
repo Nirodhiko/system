@@ -1,5 +1,4 @@
 # NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
@@ -22,6 +21,16 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+
+  # Input method - fcitx5 with Rime
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-rime
+      fcitx5-gtk
+    ];
+  };
 
   #
   services.xserver.enable = true;
@@ -70,6 +79,7 @@
     goldendict-ng
     fuzzel
     swaybg
+    waybar
     xwayland-satellite
     wechat-uos
     wpsoffice
