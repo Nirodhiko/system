@@ -33,6 +33,7 @@ shape = "Beam"
 blinking = "On"
 
 [mouse]
+hide_when_typing = true
 bindings = [
   { mouse = "Right",  action = "Paste" },
   { mouse = "Middle", mode = "~Vi", action = "PasteSelection" },

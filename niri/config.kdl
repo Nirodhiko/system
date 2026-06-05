@@ -273,7 +273,7 @@ layout {
 
 // Wallpaper: replace the path with your own image.
 // swaybg supports -m (mode): fill, fit, stretch, center, tile, or solid_color.
-spawn-sh-at-startup "swaybg -i $HOME/.config/wallpapers/1.jpg -m fill &"
+spawn-sh-at-startup "swaybg -i $HOME/.config/wallpapers/1.png -m fill &"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -404,7 +404,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
 
-    Mod+Q repeat=false { close-window; }
+    Mod+Space  repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }

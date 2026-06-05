@@ -83,9 +83,14 @@
     xwayland-satellite
     wechat-uos
     wpsoffice
+    adwaita-icon-theme
   ];
-  #
+  environment.variables = {
+    XCURSOR_THEME = "Adwaita";
+    XCURSOR_SIZE = "18";
+  };
 
+  #
   services.greetd = {
     enable = true;
     settings = {
