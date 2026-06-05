@@ -1,0 +1,15 @@
+[user]
+  name = Niro
+	email = nirodhiko@outlook.com
+[core]
+  editor = nano
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[color]
+  ui = auto
+[http]
+  sslverify = false
+; [credential]
+  ; helper = gopass
