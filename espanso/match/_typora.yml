@@ -1,0 +1,10 @@
+matches:
+  # Text color
+  - trigger: :red
+    replace: <span style='color:red'>$|$</span>
+  - trigger: :green
+    replace: <span style='color:green'>$|$</span>
+  - trigger: :blue
+    replace: <span style='color:blue'>$|$</span>
+  - trigger: :yellow
+    replace: <span style='color:yellow'>$|$</span>
