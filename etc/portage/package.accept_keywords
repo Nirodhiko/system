@@ -1,0 +1,27 @@
+# tools
+sys-fs/duf ~amd64
+gui-apps/wlsunset ~amd64
+gui-apps/wev ~amd64
+gui-apps/swappy ~amd64
+media-gfx/swayimg ~amd64
+app-editors/vscode ~amd64
+app-misc/ddcutil ~amd64
+sys-apps/pnpm ~amd64
+media-fonts/nerd-fonts ~amd64
+media-fonts/symbola ~amd64
+gui-apps/grimshot **
+dev-vcs/gitui ~amd64
+x11-terms/alacritty ~amd64
+www-client/vivaldi ~amd64
+app-office/onlyoffice-bin ~amd64
+app-text/goldendict ~amd64
+app-editors/helix ~amd64
+media-video/obs-studio ~amd64
+media-gfx/inkscape ~amd64
+app-text/sigil ~amd64
+
+
+# obs-studio
+media-libs/libvpl ~amd64
+media-libs/intel-mediasdk ~amd64
+media-video/v4l2loopback **

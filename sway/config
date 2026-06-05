@@ -1,0 +1,245 @@
+### Read `man 5 sway` for a complete reference.
+exec --no-startup-id dbus-update-activation-environment --all
+
+set $mod   Mod4
+
+set $up    k
+set $down  j
+set $left  h
+set $right l
+
+set $font               pango:Noto Sans Medium 8 
+set $focused_bg_color   #98562e
+set $unfocused_bg_color #242424
+set $border_color       #242424
+set $text_color         #ffffff
+
+set $term alacritty
+set $wallpapers_path    $HOME/.config/wallpapers/
+
+### control 
+bindsym $mod+Shift+s    reload
+bindsym $mod+Shift+q    exec "swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes, exit sway' 'swaymsg exit'"
+
+### style
+show_marks                yes
+default_border            pixel 1
+hide_edge_borders         --i3 smart
+titlebar_border_thickness 0
+titlebar_padding 0
+font                      $font
+client.focused            $border_color $focused_bg_color $text_color
+client.unfocused          $border_color $unfocused_bg_color $text_color
+
+### bar
+bar {
+  status_command while date +'%I:%M %p'; do sleep 1; done
+  mode           hide
+  hidden_state   hide
+  modifier       Mod3
+  font           $font
+  tray_output    *
+  colors {
+    background        $unfocused_bg_color 
+    focused_workspace $border_color $focused_bg_color #ffffff 
+  }
+}
+bindsym $mod+b           bar hidden_state show
+bindsym --release $mod+b bar hidden_state hide
+
+### window
+# layout 
+bindsym $mod+s layout toggle splith tabbed
+
+# control
+bindsym $mod+space kill
+bindsym $mod+f     fullscreen toggle
+
+# resize
+mode "resize" {
+  bindsym $left  resize shrink width 10 px or 10 ppt
+  bindsym $up    resize grow height 10 px or 10 ppt
+  bindsym $down  resize shrink height 10 px or 10 ppt
+  bindsym $right resize grow width 10 px or 10 ppt
+
+  bindsym Left   resize shrink width 10 px or 10 ppt
+  bindsym Down   resize grow height 10 px or 10 ppt
+  bindsym Up     resize shrink height 10 px or 10 ppt
+  bindsym Right  resize grow width 10 px or 10 ppt
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+v mode "default"
+}
+bindsym $mod+v mode "resize"
+
+# switch focus
+bindsym $mod+a focus parent
+bindsym $mod+z focus child
+
+bindsym $mod+$left  focus left
+bindsym $mod+$down  focus down
+bindsym $mod+$up    focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Left   focus left
+bindsym $mod+Down   focus down
+bindsym $mod+Up     focus up
+bindsym $mod+Right  focus right
+
+# move
+bindsym $mod+Shift+$left  move left
+bindsym $mod+Shift+$down  move down
+bindsym $mod+Shift+$up    move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+Left   move left
+bindsym $mod+Shift+Down   move down
+bindsym $mod+Shift+Up     move up
+bindsym $mod+Shift+Right  move right
+
+# floating
+# Drag floating windows by holding down $mod and left mouse button.
+floating_modifier $mod normal
+# toggle floating window
+bindsym $mod+Control+f      floating toggle
+# toggle floating window focus
+bindsym $mod+Shift+f    focus mode_toggle
+
+# create scratchpad
+bindsym $mod+bracketleft  move scratchpad
+# show scratchpad
+bindsym $mod+bracketright scratchpad show
+
+### workspace
+workspace_layout tabbed
+
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
+
+bindsym $mod+i workspace number $ws1
+bindsym $mod+e workspace number $ws2
+bindsym $mod+o workspace number $ws3
+bindsym $mod+r workspace number $ws4
+bindsym $mod+t workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Shift+i move container to workspace number $ws1
+bindsym $mod+Shift+e move container to workspace number $ws2
+bindsym $mod+Shift+o move container to workspace number $ws3
+bindsym $mod+Shift+r move container to workspace number $ws4
+bindsym $mod+Shift+t move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+### system mode
+set $temp_mini   1600
+set $temp_low    2500
+set $temp_middle 3500
+set $temp_max    5800
+set $Sleep       systemctl hybrid-sleep
+
+set $system_mode ( l )lock   ( q )logout   ( s )sleep   ( r )reboot   ( p )shutdown   (↑)max   (←)low   (→)middle   (↓)mini   ( pgUp )vpn on  ( pgDn )vpn off   ( c )screenshot   ( w )wifi   ( - )brightness   ( + )brightness   ( i )contrast   ( d )contrast
+
+mode "$system_mode" {
+  bindsym l exec swaylock,                    mode "default"
+  bindsym q exec swaymsg exit,                mode "default"
+  bindsym s exec $Sleep,                      mode "default"
+  bindsym r exec sudo systemctl reboot,       mode "default"
+  bindsym p exec sudo systemctl poweroff -i,  mode "default"
+  bindsym w exec $HOME/.config/sway/wifi.sh,  mode "default"
+  bindsym c exec grimshot save area ~/Pictures/last.png, mode "default"
+
+  bindsym Up    exec pkill wlsunset && wlsunset -t $temp_max -S 23:58 -s 23:58,     mode "default"
+  bindsym Left  exec pkill wlsunset && wlsunset -t $temp_low -S 23:58 -s 23:58,     mode "default"
+  bindsym Right exec pkill wlsunset && wlsunset -t $temp_middle -S 23:58 -s 23:58,  mode "default"
+  bindsym Down  exec pkill wlsunset && wlsunset -t $temp_mini -S 23:58 -s 23:58,    mode "default"
+
+  bindsym Prior exec sudo wg-quick up wg0,                   mode "default"
+  bindsym Next  exec sudo wg-quick down wg0,                 mode "default"
+
+  bindsym minus exec sudo ddcutil setvcp 10 - 6, mode "default"
+  bindsym equal exec sudo ddcutil setvcp 10 + 6, mode "default"
+  bindsym d exec sudo ddcutil setvcp 12 - 5,     mode "default"
+  bindsym i exec sudo ddcutil setvcp 12 + 5,     mode "default"
+
+  bindsym BackSpace mode "default"
+}
+bindsym $mod+Delete mode "$system_mode"
+
+### app mode
+set $app_mode ( a ) anytype   ( o ) obs   ( c ) shotcut   ( i ) inkscape   ( e ) office  ( s ) sigil   ( v ) vlc
+mode "$app_mode" {
+  bindsym a exec anytype.AppImage,                  mode "default"
+  bindsym o exec obs,                               mode "default"
+  bindsym c exec shotcut.AppImage,                  mode "default"
+  bindsym i exec inkscape,                          mode "default"
+  bindsym e exec office.AppImage,                   mode "default"
+  bindsym s exec sigil,                             mode "default"
+  bindsym v exec vlc,                               mode "default"
+
+  bindsym BackSpace mode "default"
+}
+bindsym $mod+Prior mode "$app_mode"
+
+### quick start app 
+bindsym $mod+Return exec alacritty -o font.size=16 font.offset.y=6 window.padding.x=60 window.padding.y=60
+bindsym $mod+y exec chrome
+bindsym $mod+z exec alacritty -o font.size=13 font.offset.y=5 window.padding.x=0 -e zed
+bindsym $mod+m exec foliate 
+bindsym $mod+p exec sioyek.AppImage
+
+bindsym $mod+semicolon exec goldendict
+for_window [class="GoldenDict"] floating enable
+
+for_window [class="Nextcloud"] floating enable
+for_window [class="com.github.johnfactotum.Foliate"] border none
+
+### temperature
+exec wlsunset -t $temp_middle -S 23:58 -s 23:58
+
+### touchpad
+input type:touchpad {
+  tap enabled
+  pointer_accel 1 # set mouse sensitivity (between -1 and 1)
+}
+
+### cursor
+seat seat0 xcursor_theme Adwaita
+seat * hide_cursor 5000
+
+### wallpapers
+output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
+
+### sleep
+exec swayidle -w \
+  timeout 1200 'swaylock' \
+  timeout 113600 'systemctl hybrid-sleep' \
+  before-sleep 'block'
+
+### notification
+exec mako
+
+### audio
+exec pulseaudio -D
+
+# Lock screen before actually starting, to be used with fish autologin
+# exec swaylock
+
+### auto startup
+exec $HOME/.config/sway/startup.sh

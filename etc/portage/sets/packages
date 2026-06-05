@@ -1,0 +1,68 @@
+# system
+app-shells/fish
+app-admin/sudo
+net-misc/dhcpcd
+net-wireless/iwd
+x11-terms/alacritty
+sys-apps/miscfiles
+sys-apps/mlocate
+sys-boot/grub
+sys-fs/btrfs-progs
+sys-kernel/linux-firmware
+sys-firmware/intel-microcode
+sys-kernel/gentoo-kernel
+sys-process/cronie
+dev-python/pip
+
+# audio
+media-sound/pavucontrol
+gnome-base/gsettings-desktop-schemas
+
+# portage
+app-portage/cfg-update
+app-portage/gentoolkit
+app-portage/mirrorselect
+app-eselect/eselect-repository
+
+# sway
+gui-apps/swayidle
+gui-apps/swaylock
+gui-apps/swappy
+gui-apps/wev
+gui-apps/wl-clipboard
+gui-apps/wlsunset
+gui-wm/sway
+media-gfx/swayimg
+x11-themes/gentoo-xcursors
+
+# fonts
+media-fonts/nerd-fonts
+media-fonts/noto
+media-fonts/noto-emoji
+
+# tools
+app-containers/docker
+app-containers/docker-compose
+dev-vcs/git
+dev-vcs/gitui
+dev-util/codespell
+dev-util/jenkins-bin
+sys-apps/pnpm
+gui-apps/grimshot
+app-arch/zip
+app-misc/neofetch
+app-misc/ddcutil
+app-arch/unrar
+sys-fs/ncdu
+sys-fs/udisks
+net-vpn/wireguard-tools
+sys-fs/duf
+sys-fs/fuse:0
+sys-process/btop
+
+# editor
+app-editors/nano
+
+# input methods
+app-i18n/fcitx-configtool
+app-i18n/fcitx-rime

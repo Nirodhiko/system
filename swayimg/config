@@ -1,0 +1,31 @@
+[general]
+scale = optimal
+fullscreen = yes
+background = none
+
+[info]
+# Mode on startup (off/brief/full)
+mode = off
+
+[font]
+name = JetBrainsMono Nerd Font Mono
+size = 10
+color = #cccccc
+shadow = #000000
+
+[list]
+order = alpha
+loop = yes
+recursive = no
+all = no
+
+[keys]
+Home = first_file
+Prior = prev_file
+Next = next_file
+Space = next_file
+f = fullscreen
+h = step_left 5
+l = step_right 5
+k = step_up 5
+j = step_down 5

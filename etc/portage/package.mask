@@ -1,0 +1,3 @@
+*/*::gentoo-zh
+*/*::guru
+*/*::12101111-overlay

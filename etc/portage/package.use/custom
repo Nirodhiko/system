@@ -1,0 +1,11 @@
+media-fonts/nerd-fonts jetbrainsmono symbolsmono
+gui-wm/sway tray grimshot swaynag
+www-client/vivaldi proprietary-codecs ffmpeg-chromium
+media-libs/libcanberra alsa
+media-video/obs-studio browser lua v4l vlc wayland qsv pulseaudio fdk jack pipewire speex truetype
+media-gfx/inkscape jpeg svg2 visio cdr dia exif
+media-gfx/swayimg tiff svg webp
+
+### resolve conflict
+sys-libs/zlib minizip
+dev-libs/libxml2 icu

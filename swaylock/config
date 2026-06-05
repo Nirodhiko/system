@@ -1,0 +1,25 @@
+font=noto
+font-size=16
+indicator-radius=100
+indicator-thickness=7
+inside-color=282828
+line-color=282828
+ring-color=282828
+inside-ver-color=282828
+line-ver-color=282828
+ring-ver-color=282828
+inside-clear-color=282828
+line-clear-color=282828
+ring-clear-color=282828
+inside-wrong-color=Be185d
+line-wrong-color=Be185d
+ring-wrong-color=Be185d
+text-color=ffffff
+text-caps-lock-color=ffffff
+text-ver-color=ffffff
+text-clear-color=ffffff
+text-wrong-color=ffffff
+image=$(find ~/.config/wallpapers/ -type f | shuf -n 1)
+ignore-empty-password
+daemonize
+show-failed-attempts
