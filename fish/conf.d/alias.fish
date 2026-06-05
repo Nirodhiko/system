@@ -1,0 +1,45 @@
+# docker
+abbr -a du -- docker compose up -d
+abbr -a ds -- docker compose stop
+abbr -a dr -- docker compose restart
+abbr -a dd -- docker compose rm
+
+# git
+abbr -a gc -- git clone
+abbr -a gp -- git push
+
+# pnpm
+abbr -a pi -- pnpm install
+abbr -a pa -- pnpm add
+abbr -a pu -- pnpm update
+abbr -a pr -- pnpm run
+abbr -a pe -- pnpm exec
+abbr -a pd -- pnpm rm
+abbr -a pc -- pnpm store prune
+
+# zed
+abbr -a v  -- zed
+abbr -a sv -- sudo -E zed
+
+# image (Sway)
+abbr -a iv -- swayimg
+abbr -a ic -- grimshot save area ~/Pictures/last.png
+abbr -a ie -- swappy -f ~/Pictures/last.png -o ~/Pictures/last.png
+
+# system
+abbr -a disk -- ncdu
+abbr -a ss -- neofetch
+abbr -a si -- btop
+abbr -a sl -- journalctl -b 0 -p 4
+
+# super user
+abbr -a sr -- su -m root
+
+# usb
+abbr -a um -- udisksctl mount -b /dev/sdb1
+abbr -a uu -- udisksctl unmount -b /dev/sdb1
+
+# ssh — must stay as function (overrides built-in)
+function ssh --description ssh
+    TERM=xterm-256color /usr/bin/ssh $argv
+end
