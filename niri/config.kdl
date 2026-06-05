@@ -13,7 +13,7 @@ input {
             // For more information, see xkeyboard-config(7).
 
             // For example:
-            // layout "us,ru"
+            layout "us"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
 
             // If this section is empty, niri will fetch xkb settings
@@ -270,6 +270,10 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 
+// Wallpaper: replace the path with your own image.
+// swaybg supports -m (mode): fill, fit, stretch, center, tile, or solid_color.
+spawn-sh-at-startup "swaybg -i $HOME/.config/wallpapers/1.jpg -m fill &"
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -365,6 +369,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+B { spawn-sh "pkill waybar || exec waybar"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
