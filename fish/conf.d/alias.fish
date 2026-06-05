@@ -28,7 +28,7 @@ abbr -a ie -- swappy -f ~/Pictures/last.png -o ~/Pictures/last.png
 
 # system
 abbr -a disk -- ncdu
-abbr -a ss -- neofetch
+abbr -a ss -- fastfetch
 abbr -a si -- btop
 abbr -a sl -- journalctl -b 0 -p 4
 
@@ -36,5 +36,6 @@ abbr -a sl -- journalctl -b 0 -p 4
 abbr -a sr -- su -m root
 
 # usb
+abbr -a us -- udisksctl status
 abbr -a um -- udisksctl mount -b /dev/sdb1
 abbr -a uu -- udisksctl unmount -b /dev/sdb1

@@ -84,6 +84,13 @@
     wechat-uos
     wpsoffice
     adwaita-icon-theme
+    ncdu
+    btop
+    fastfetch
+    sway-contrib.grimshot
+    swappy
+    nodejs
+    pnpm
   ];
   environment.variables = {
     XCURSOR_THEME = "Adwaita";
