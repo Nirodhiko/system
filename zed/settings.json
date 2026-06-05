@@ -1,0 +1,44 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "buffer_font_family": ".ZedMono",
+  "ui_font_family": ".ZedSans",
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
+      "enable_thinking": true,
+      "effort": "max"
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "One Dark",
+  },
+}

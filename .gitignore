@@ -4,3 +4,4 @@ fish/fish_variables
 rime/build/
 rime/luna_pinyin.userdb.txt
 *.userdb
+rime/user.yaml

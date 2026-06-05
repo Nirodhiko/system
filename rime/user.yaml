@@ -1,10 +1,10 @@
 var:
-  last_build_time: 1780662427
+  last_build_time: 1780668827
   option:
     full_shape: false
     simplification: false
-  previously_selected_schema: luna_pinyin
+  previously_selected_schema: easy_en
   schema_access_time:
-    easy_en: 1777302700
-    luna_pinyin: 1780661482
-    pali: 1777344552
+    easy_en: 1780669379
+    luna_pinyin: 1780669251
+    pali: 1780668860
