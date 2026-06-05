@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function create_soft_link {
   file_path="$1/$3"
@@ -25,12 +25,12 @@ function create_soft_link {
 files=("alacritty" "fish" "sioyek" "swayimg")
 for file in "${files[@]}"
 do
-  create_soft_link "$HOME/dotfiles" "$HOME/.config" "$file"
+  create_soft_link "$HOME/system" "$HOME/.config" "$file"
 done
 
 # git
-create_soft_link "$HOME/dotfiles" "$HOME" ".gitconfig"
+create_soft_link "$HOME/system" "$HOME" ".gitconfig"
 
 # rime
 mkdir -p $HOME/.config/fcitx
-create_soft_link "$HOME/dotfiles" "$HOME/.config/fcitx" "rime"
+create_soft_link "$HOME/system" "$HOME/.config/fcitx" "rime"

@@ -21,3 +21,8 @@ end
 
 # enable vi mode
 fish_vi_key_bindings
+
+# key bingds
+bind \cl forward-bigword
+bind \ch backward-bigword
+bind \cY fish_clipboard_copy
