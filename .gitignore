@@ -3,3 +3,4 @@ fish/conf.d/fish_frozen_theme.fish
 fish/fish_variables
 rime/build/
 rime/luna_pinyin.userdb.txt
+*.userdb

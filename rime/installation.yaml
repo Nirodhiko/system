@@ -1,7 +1,8 @@
-distribution_code_name: Weasel
-distribution_name: Weasel
-distribution_version: 0.17.4
+distribution_code_name: "fcitx-rime"
+distribution_name: Rime
+distribution_version: 5.1.13
 install_time: "Wed Feb  4 10:33:38 2026"
 installation_id: "71976ba1-830a-45d3-bed3-0cdf4d8efa78"
-sync_dir: C:\Users\tiany\Documents\rime_sync
-rime_version: 1.13.1
+rime_version: 1.16.1
+sync_dir: "~/.config"
+update_time: "Fri Jun  5 16:35:41 2026"
