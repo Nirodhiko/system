@@ -32,14 +32,6 @@
   #
   services.xserver.enable = true;
 
-  # Auto-suspend after 30 minutes of inactivity
-  services.logind.settings = {
-    "Login" = {
-      IdleAction = "suspend";
-      IdleActionSec = "30min";
-    };
-  };
-
   services.displayManager.ly.enable = true;
 
   # Enable sound with pipewire.
@@ -74,12 +66,13 @@
   programs.fish.enable = true;
   programs.niri.enable = true;
 
-  #
+  # Packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     nil # Nix language server for IDE support
     brightnessctl
     swaylock
+    swayidle
     wget
     alacritty
     git
@@ -111,6 +104,8 @@
     sioyek
     goldendict-ng
   ];
+
+  # cursor
   environment.variables = {
     XCURSOR_THEME = "Adwaita";
     XCURSOR_SIZE = "24";

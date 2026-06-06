@@ -282,6 +282,9 @@ layout {
 
 // Wallpaper: replace the path with your own image.
 // swaybg supports -m (mode): fill, fit, stretch, center, tile, or solid_color.
+// Idle management: lock after 15 min, suspend after 30 min, lock before any sleep
+spawn-sh-at-startup "swayidle -w timeout 900 'swaylock -f' timeout 1800 'systemctl suspend' before-sleep 'swaylock -f'"
+
 spawn-sh-at-startup "swaybg -i $HOME/.config/wallpapers/1.png -m fill &"
 spawn-sh-at-startup "wechat-uos"
 spawn-sh-at-startup "zeditor"
@@ -413,7 +416,7 @@ binds {
     Mod+G hotkey-overlay-title="Run Chrome: chrome" { spawn "google-chrome"; }
     Mod+Q hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+D hotkey-overlay-title="Run Goldendict: goldendict" { spawn "goldendict"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "swaylock --config $HOME/system/swaylock/config"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+B { spawn-sh "pkill waybar || exec waybar"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
