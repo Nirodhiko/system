@@ -1,36 +1,50 @@
 #!/usr/bin/env bash
+#
+# Deploy dotfiles and the NixOS configuration by creating symlinks
+# pointing at this repository.
 
-function create_soft_link {
-  file_path="$1/$3"
-  link_path="$2/$3"
+set -euo pipefail
 
-  if [ -e "$link_path" ]; then
-    echo "$3 already exists, remove it fistly."
-    sudo rm -rf "$link_path"
+# Absolute path to the directory containing this script (the repo root).
+SYSTEM_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+log()  { printf '==> %s\n' "$*"; }
+warn() { printf '!!  %s\n' "$*" >&2; }
+
+# link <source> <destination>
+#
+# Atomically replaces <destination> with a symlink pointing at <source>.
+# Skips with a warning if <source> doesn't exist.
+link() {
+  local src="$1" dst="$2"
+
+  if [[ ! -e "$src" && ! -L "$src" ]]; then
+    warn "source missing, skipping: $src"
+    return
   fi
 
-  if [ -L "$link_path" ]; then
-    if [ ! -e "$(readlink "$link_file")" ]; then
-      echo "$3 is a invalid link file, remove it firstly."
-      sudo rm "$link_path"
-    fi
-  fi
-
-  ln -s "$file_path" "$link_path"
-  echo "Soft link for $3 created successfully."
-  echo "------------------------------------------------------------------------"
+  mkdir -p "$(dirname "$dst")"
+  # If <dst> is a real directory (not a symlink), ln -sfn won't replace it.
+  # Remove it first so a fresh-clone deploy can overwrite stock dirs.
+  [[ -d "$dst" && ! -L "$dst" ]] && rm -rf "$dst"
+  ln -sfn "$src" "$dst"
+  log "$dst -> $src"
 }
 
-# $HOME/.config
-files=("alacritty" "fish" "niri" "sioyek" "swayimg" "swaylock" "waybar" "wallpapers" "zed")
-for file in "${files[@]}"
-do
-  create_soft_link "$HOME/system" "$HOME/.config" "$file"
+# ~/.config/<name>
+for entry in alacritty fish niri sioyek swayimg swaylock waybar wallpapers zed; do
+  link "$SYSTEM_DIR/$entry" "$HOME/.config/$entry"
 done
 
-# git
-create_soft_link "$HOME/system" "$HOME" ".gitconfig"
+# ~/<dotfile>
+link "$SYSTEM_DIR/.gitconfig" "$HOME/.gitconfig"
 
-# rime
-mkdir -p $HOME/.local/share/fcitx5
-create_soft_link "$HOME/system" "$HOME/.local/share/fcitx5" "rime"
+# Rime (fcitx5 input method data)
+link "$SYSTEM_DIR/rime" "$HOME/.local/share/fcitx5/rime"
+
+# NixOS configuration (requires root)
+log "linking NixOS configuration (sudo required)"
+sudo ln -sfn "$SYSTEM_DIR/nixos/configuration.nix" /etc/nixos/configuration.nix
+log "/etc/nixos/configuration.nix -> $SYSTEM_DIR/nixos/configuration.nix"
+
+log "Done."
