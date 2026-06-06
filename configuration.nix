@@ -24,7 +24,16 @@
 
   #
   services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
+
+  # Auto-suspend after 30 minutes of inactivity
+  services.logind.settings = {
+    "Login" = {
+      IdleAction = "suspend";
+      IdleActionSec = "30min";
+    };
+  };
+
+  services.displayManager.ly.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -59,9 +68,8 @@
   #
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    google-chrome
+    brightnessctl
     wget
-    zed-editor
     alacritty
     git
     fuzzel
@@ -82,6 +90,8 @@
     p7zip
     nodejs
     pnpm
+    zed-editor
+    google-chrome
     inkscape
     sigil
     obs-studio
@@ -96,16 +106,6 @@
   };
 
   #
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        # Boots into tuigreet, which then launches niri-session
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd niri-session";
-        user = "niro";
-      };
-    };
-  };
 
   # fonts
   fonts = {
