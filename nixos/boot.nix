@@ -7,10 +7,9 @@
   # Hide the systemd-boot menu entirely (hold a key during boot to show it).
   boot.loader.timeout = 0;
 
-  # Silent boot & shutdown — no kernel messages, no systemd status, no cursor.
+  # Fully silent boot & shutdown — black screen, no text, no cursor, no splash.
   boot.kernelParams = [
     "quiet"
-    "splash"
     "loglevel=3"
     "rd.systemd.show_status=false"
     "rd.udev.log_level=3"
@@ -20,13 +19,4 @@
   ];
   boot.consoleLogLevel = 0;
   boot.initrd.verbose = false;
-
-  # Use systemd in the initrd so Plymouth can show a splash from the very start.
-  boot.initrd.systemd.enable = true;
-
-  # Plymouth covers the screen during boot and shutdown so no text is ever shown.
-  boot.plymouth = {
-    enable = true;
-    theme = "bgrt";
-  };
 }
