@@ -7,6 +7,12 @@
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
 prefer-no-csd
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 24
+    // hide-when-typing
+    hide-after-inactive-ms 5000
+}
 input {
     keyboard {
         xkb {
@@ -136,7 +142,9 @@ layout {
     }
 
     // You can also customize the heights that "switch-preset-window-height" (Mod+Ctrl+Shift+R) toggles between.
-    // preset-window-heights { }
+    preset-window-heights {
+        proportion 0.66667
+    }
 
     // You can change the default width of the new windows.
     default-column-width { proportion 0.5; }
@@ -275,6 +283,9 @@ layout {
 // Wallpaper: replace the path with your own image.
 // swaybg supports -m (mode): fill, fit, stretch, center, tile, or solid_color.
 spawn-sh-at-startup "swaybg -i $HOME/.config/wallpapers/1.png -m fill &"
+spawn-sh-at-startup "wechat-uos"
+spawn-sh-at-startup "zeditor"
+spawn-sh-at-startup "google-chrome"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

@@ -22,16 +22,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Input method - fcitx5 with Rime
-  i18n.inputMethod = {
-    enable = true;
-    type = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-rime
-      fcitx5-gtk
-    ];
-  };
-
   #
   services.xserver.enable = true;
   services.displayManager.gdm.enable = true;
@@ -102,7 +92,7 @@
   ];
   environment.variables = {
     XCURSOR_THEME = "Adwaita";
-    XCURSOR_SIZE = "14";
+    XCURSOR_SIZE = "24";
   };
 
   #
@@ -158,6 +148,16 @@
         emoji      = [ "Noto Color Emoji" ];
       };
     };
+  };
+
+  # Input method - fcitx5 with Rime
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-rime
+      fcitx5-gtk
+    ];
   };
 
   # Enable keyd and configure Caps Lock as a dual-role key
