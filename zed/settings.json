@@ -17,10 +17,10 @@
     "default_profile": "write",
     "sidebar_side": "right",
     "default_model": {
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "provider": "anthropic",
+      "model": "claude-opus-4-7",
       "enable_thinking": true,
-      "effort": "max"
+      "effort": "xhigh"
     },
     "dock": "right",
     "favorite_models": [],
@@ -39,7 +39,7 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "GitHub Light",
     "dark": "One Dark",
   },

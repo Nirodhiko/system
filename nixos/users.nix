@@ -1,0 +1,13 @@
+{ config, pkgs, ... }:
+
+{
+  users.users.niro = {
+    isNormalUser = true;
+    description = "Niro";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    shell = pkgs.fish;
+  };
+}
