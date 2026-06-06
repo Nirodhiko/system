@@ -10,6 +10,14 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # Silent boot — no kernel messages, no systemd status
+  boot.kernelParams = [
+    "quiet"
+    "loglevel=3"
+    "rd.udev.log_priority=3"
+  ];
+  boot.consoleLogLevel = 0;
+  boot.initrd.verbose = false;
 
   # networking
   networking.hostName = "nixos";
