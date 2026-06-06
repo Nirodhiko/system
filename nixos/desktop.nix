@@ -1,8 +1,18 @@
 { config, pkgs, ... }:
 
 {
-  # Display manager (TTY-based, no X server needed)
-  services.displayManager.ly.enable = true;
+  # Display manager: SDDM on Wayland with the Astronaut theme.
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    package = pkgs.kdePackages.sddm; # Qt 6 build (recommended)
+    theme = "sddm-astronaut-theme";
+    extraPackages = with pkgs.kdePackages; [
+      qtsvg
+      qtmultimedia
+      qtvirtualkeyboard
+    ];
+  };
 
   # Wayland compositor & shell tools
   programs.niri.enable = true;
