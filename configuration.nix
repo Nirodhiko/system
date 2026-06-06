@@ -89,12 +89,13 @@
     fastfetch
     sway-contrib.grimshot
     swappy
+    swayimg
     nodejs
     pnpm
   ];
   environment.variables = {
     XCURSOR_THEME = "Adwaita";
-    XCURSOR_SIZE = "18";
+    XCURSOR_SIZE = "14";
   };
 
   #

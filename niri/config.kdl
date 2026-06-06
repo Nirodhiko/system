@@ -6,6 +6,7 @@
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
+prefer-no-csd
 input {
     keyboard {
         xkb {
@@ -111,7 +112,7 @@ input {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 2
+    gaps 0
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -344,11 +345,30 @@ window-rule {
     // block-out-from "screencast"
 }
 
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
+// Disable rounded corners for all windows.
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry false
+}
+
+window-rule {
+    match app-id=r#"^google-chrome$"#
+    open-maximized true
+}
+
+window-rule {
+    match app-id=r#"^dev.zed.Zed$"#
+    open-maximized true
+}
+
+window-rule {
+    match app-id=r#"^io.github.xiaoyifang.goldendict_ng$"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^com.github.johnfactotum.Foliate$"#
+    open-floating true
 }
 
 binds {
@@ -367,8 +387,11 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Z hotkey-overlay-title="Run Zeditor: zeditor" { spawn "zeditor"; }
+    Mod+G hotkey-overlay-title="Run Chrome: chrome" { spawn "google-chrome"; }
+    Mod+Q hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+D hotkey-overlay-title="Run Goldendict: goldendict" { spawn "goldendict"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+B { spawn-sh "pkill waybar || exec waybar"; }
 
@@ -411,8 +434,8 @@ binds {
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
     Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
+    // Mod+J     { focus-window-down; }
+    // Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
@@ -426,8 +449,8 @@ binds {
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
-    // Mod+J     { focus-window-or-workspace-down; }
-    // Mod+K     { focus-window-or-workspace-up; }
+    Mod+J     { focus-window-or-workspace-down; }
+    Mod+K     { focus-window-or-workspace-up; }
     // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
     // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
