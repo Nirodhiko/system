@@ -362,12 +362,17 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^io.github.xiaoyifang.goldendict_ng$"#
-    open-floating true
+    match app-id=r#"^com.obsproject.Studio$"#
+    open-maximized true
 }
 
 window-rule {
     match app-id=r#"^com.github.johnfactotum.Foliate$"#
+    open-maximized true
+}
+
+window-rule {
+    match app-id=r#"^io.github.xiaoyifang.goldendict_ng$"#
     open-floating true
 }
 

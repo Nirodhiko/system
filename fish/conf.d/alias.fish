@@ -21,7 +21,7 @@ abbr -a pc -- pnpm store prune
 abbr -a v  -- zed
 abbr -a sv -- sudo -E zed
 
-# image (Sway)
+# image
 abbr -a iv -- swayimg
 abbr -a ic -- grimshot save area ~/Pictures/last.png
 abbr -a ie -- swappy -f ~/Pictures/last.png -o ~/Pictures/last.png
@@ -32,8 +32,10 @@ abbr -a ss -- fastfetch
 abbr -a si -- btop
 abbr -a sl -- journalctl -b 0 -p 4
 
-# super user
-abbr -a sr -- su -m root
+# nixos
+abbr -a nt -- nixos-rebuild build-vm
+abbr -a nr -- sudo nixos-rebuild switch
+abbr -a no -- nix store optimise
 
 # usb
 abbr -a us -- udisksctl status

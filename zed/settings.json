@@ -14,6 +14,7 @@
     "dock": "left"
   },
   "agent": {
+    "default_profile": "write",
     "sidebar_side": "right",
     "default_model": {
       "provider": "deepseek",

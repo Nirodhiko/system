@@ -74,9 +74,6 @@
     zed-editor
     alacritty
     git
-    foliate
-    sioyek
-    goldendict-ng
     fuzzel
     swaybg
     waybar
@@ -92,6 +89,13 @@
     swayimg
     nodejs
     pnpm
+    inkscape
+    sigil
+    obs-studio
+    zapzap
+    foliate
+    sioyek
+    goldendict-ng
   ];
   environment.variables = {
     XCURSOR_THEME = "Adwaita";
