@@ -3,10 +3,9 @@
 
 {
   #
-  imports =
-    [
-      /etc/nixos/hardware-configuration.nix
-    ];
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -48,16 +47,18 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."niro" = {
     initialPassword = "8989";
     isNormalUser = true;
     description = "Niro";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.fish;
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -68,7 +69,9 @@
   #
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    nil # Nix language server for IDE support
     brightnessctl
+    swaylock
     wget
     alacritty
     git
@@ -131,21 +134,21 @@
 
       hinting = {
         enable = true;
-        style = "slight";   # "none" | "slight" | "medium" | "full"
-        autohint = false;   # true = FreeType's autohinter (good for fonts without hints)
+        style = "slight"; # "none" | "slight" | "medium" | "full"
+        autohint = false; # true = FreeType's autohinter (good for fonts without hints)
       };
 
       subpixel = {
-        rgba = "rgb";       # "rgb" | "bgr" | "vrgb" | "vbgr" | "none"
+        rgba = "rgb"; # "rgb" | "bgr" | "vrgb" | "vbgr" | "none"
         lcdfilter = "default"; # "none" | "default" | "light" | "legacy"
       };
 
       # Set system-wide default fonts
       defaultFonts = {
-        serif      = [ "Noto Serif" ];
-        sansSerif  = [ "Noto Sans" ];
-        monospace  = [ "Fira Code" ];
-        emoji      = [ "Noto Color Emoji" ];
+        serif = [ "Noto Serif" ];
+        sansSerif = [ "Noto Sans" ];
+        monospace = [ "Fira Code" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };

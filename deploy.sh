@@ -22,7 +22,7 @@ function create_soft_link {
 }
 
 # $HOME/.config
-files=("alacritty" "fish" "niri" "sioyek" "swayimg" "waybar" "wallpapers" "zed")
+files=("alacritty" "fish" "niri" "sioyek" "swayimg" "swaylock" "waybar" "wallpapers" "zed")
 for file in "${files[@]}"
 do
   create_soft_link "$HOME/system" "$HOME/.config" "$file"
