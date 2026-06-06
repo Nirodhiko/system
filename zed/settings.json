@@ -11,7 +11,7 @@
   "buffer_font_family": ".ZedMono",
   "ui_font_family": ".ZedSans",
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "agent": {
     "default_profile": "write",
@@ -20,20 +20,20 @@
       "provider": "anthropic",
       "model": "claude-opus-4-7",
       "enable_thinking": true,
-      "effort": "xhigh"
+      "effort": "xhigh",
     },
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "vim_mode": true,
   "ui_font_size": 16,
@@ -42,5 +42,10 @@
     "mode": "dark",
     "light": "GitHub Light",
     "dark": "One Dark",
+  },
+  "languages": {
+    "Nix": {
+      "language_servers": ["nixd", "!nil"],
+    },
   },
 }
