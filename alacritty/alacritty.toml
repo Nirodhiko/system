@@ -6,6 +6,10 @@ import = [
 [window]
 #startup_mode = "Fullscreen"
 
+[window.padding]
+x = 15
+y = 0
+
 [font]
 size = 14
 

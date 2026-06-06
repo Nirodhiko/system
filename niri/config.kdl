@@ -372,6 +372,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"^sigil$"#
+    open-maximized true
+}
+
+window-rule {
     match app-id=r#"^io.github.xiaoyifang.goldendict_ng$"#
     open-floating true
 }
