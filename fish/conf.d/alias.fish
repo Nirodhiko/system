@@ -41,3 +41,8 @@ abbr -a no -- nix store optimise
 abbr -a us -- udisksctl status
 abbr -a um -- udisksctl mount -b /dev/sdb1
 abbr -a uu -- udisksctl unmount -b /dev/sdb1
+
+# wifi
+abbr -a wo -- nmcli device wifi on
+abbr -a wl -- nmcli device wifi list
+abbr -a wc -- nmcli device wifi connect
