@@ -69,7 +69,7 @@
   # Packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    nil # Nix language server for IDE support
+    nixd # Nix language server for IDE support
     brightnessctl
     swaylock
     swayidle
