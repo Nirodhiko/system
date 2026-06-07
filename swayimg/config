@@ -1,31 +1,199 @@
+# vim: filetype=dosini
+# Swayimg Dark Theme (Catppuccin Mocha inspired)
+# For swayimg v4.x
+
 [general]
+# Startup mode (viewer/slideshow/gallery)
+mode = viewer
+# Window size at startup (fullscreen/WxH)
+size = fullscreen
+# Overlay mode (yes/no)
+overlay = no
+# Window decoration (yes/no)
+decoration = no
+# Signal actions
+sigusr1 = reload
+sigusr2 = next_file
+
+[viewer]
+# Window background: solid dark (#RRGGBBAA)
+window = #181825ff
+# Transparency background (grid or #RRGGBBAA)
+transparency = grid
+# Default image scale (optimal/width/height/fit/fill/real/keep)
 scale = optimal
-fullscreen = yes
-background = none
+# Image position (center/topleft/topright/bottomleft/bottomright)
+position = center
+# Anti-aliasing mode (mks13/spline36/default)
+antialiasing = mks13
+# Loop image list (yes/no)
+loop = yes
+# History size (cached images)
+history = 3
+# Preload images
+preload = 2
 
-[info]
-# Mode on startup (off/brief/full)
-mode = off
+[slideshow]
+# Time between slides (seconds)
+time = 5
+# Window background mode (solid color or "auto" for blurred current image)
+window = auto
+# Transparency background
+transparency = #181825ff
+# Default image scale
+scale = fit
+# Image position
+position = center
+# Anti-aliasing mode
+antialiasing = mks13
 
-[font]
-name = JetBrainsMono Nerd Font Mono
-size = 10
-color = #cccccc
-shadow = #000000
+[gallery]
+# Thumbnail size (pixels)
+size = 180
+# Padding between thumbnails (pixels)
+padding = 6
+# Cache size (number of thumbnails)
+cache = 100
+# Preload thumbnails (yes/no)
+preload = yes
+# Persistent thumbnail storage (yes/no)
+pstore = yes
+# Thumbnail aspect ratio (fit/fill/keep)
+aspect = fill
+# Anti-aliasing mode
+antialiasing = mks13
+# Gallery window background
+window = #181825ff
+# Thumbnail background
+background = #313244ff
+# Selected thumbnail background
+select = #45475aff
+# Selection border color (blue accent)
+border_color = #89b4faff
+# Selection border width (pixels)
+border_width = 3
+# Selected thumbnail scale
+selected_scale = 1.12
 
 [list]
+# Sort order (none/alpha/numeric/mtime/size/random)
 order = alpha
-loop = yes
+# Reverse order (yes/no)
+reverse = no
+# Read directories recursively (yes/no)
 recursive = no
+# Add all files from the same directory (yes/no)
 all = no
+# File system monitor (yes/no)
+fsmon = yes
 
-[keys]
+[font]
+# Font name
+name = JetBrainsMono Nerd Font Mono
+# Font size (pixels)
+size = 12
+# Font color (light text #cdd6f4)
+color = #cdd6f4ff
+# Font shadow
+shadow = #000000d0
+# Font background (transparent)
+background = #00000000
+
+[info]
+# Show info on startup (yes/no)
+show = no
+# Padding from window edge (pixels)
+padding = 12
+# Info overlay timeout (seconds, 0 for always)
+info_timeout = 5
+# Status message timeout (seconds)
+status_timeout = 3
+
+[info.viewer]
+# Top-left block
+top_left = +name,+format,+filesize
+# Top-right block
+top_right = index
+# Bottom-left block
+bottom_left = scale
+# Bottom-right block
+bottom_right = status
+
+[info.slideshow]
+top_left = +name,+index
+top_right = none
+bottom_left = none
+bottom_right = status
+
+[info.gallery]
+top_left = +name
+top_right = index
+bottom_left = none
+bottom_right = status
+
+[keys.viewer]
 Home = first_file
+End = last_file
 Prior = prev_file
 Next = next_file
 Space = next_file
 f = fullscreen
-h = step_left 5
-l = step_right 5
-k = step_up 5
-j = step_down 5
+h = step_left 10
+l = step_right 10
+k = step_up 10
+j = step_down 10
+Left = step_left 10
+Right = step_right 10
+Up = step_up 10
+Down = step_down 10
+Equal = zoom +10
+Plus = zoom +10
+Minus = zoom -10
+w = zoom width
+z = zoom fit
+0 = zoom real
+BackSpace = zoom optimal
+r = reload
+i = info
+a = antialiasing
+bracketleft = rotate_left
+bracketright = rotate_right
+m = flip_vertical
+Shift+m = flip_horizontal
+s = mode slideshow
+Return = mode gallery
+q = exit
+Escape = exit
+
+[keys.slideshow]
+Space = pause
+f = fullscreen
+i = info
+Return = mode
+q = exit
+Escape = exit
+
+[keys.gallery]
+Home = first_file
+End = last_file
+Left = step_left
+Right = step_right
+Up = step_up
+Down = step_down
+h = step_left
+l = step_right
+k = step_up
+j = step_down
+Prior = page_up
+Next = page_down
+f = fullscreen
+s = mode slideshow
+Return = mode viewer
+Equal = thumb +20
+Plus = thumb +20
+Minus = thumb -20
+a = antialiasing
+r = reload
+i = info
+q = exit
+Escape = exit

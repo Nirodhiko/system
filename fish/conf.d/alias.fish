@@ -23,7 +23,7 @@ abbr -a sv -- sudo -E zed
 
 # image
 abbr -a iv -- swayimg
-abbr -a ic -- grimshot save area ~/Pictures/last.png
+abbr -a is -- grimshot save area ~/Pictures/last.png
 abbr -a ie -- swappy -f ~/Pictures/last.png -o ~/Pictures/last.png
 
 # system
