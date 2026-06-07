@@ -386,6 +386,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"^ONLYOFFICE$"#
+    open-maximized true
+}
+
+window-rule {
     match app-id=r#"^sigil$"#
     open-maximized true
 }

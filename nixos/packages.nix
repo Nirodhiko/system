@@ -35,7 +35,7 @@
     # Apps
     google-chrome
     wechat-uos
-    wpsoffice
+    onlyoffice-desktopeditors
     zapzap
     obs-studio
     inkscape
