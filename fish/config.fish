@@ -19,7 +19,11 @@ if set -q PNPM_HOME; and not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
+# Enable vi key bindings
+fish_vi_key_bindings
+
 # key bingds
 bind \cl forward-bigword
 bind \ch backward-bigword
-bind \cY fish_clipboard_copy
+bind \cy fish_clipboard_copy
+bind \cv fish_clipboard_paste
