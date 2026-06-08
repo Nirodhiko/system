@@ -9,7 +9,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        /etc/nixos/hardware-configuration.nix
+        ./hardware-configuration.nix
 
         ./boot.nix
         ./desktop.nix
