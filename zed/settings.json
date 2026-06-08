@@ -52,9 +52,9 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Gruvbox Light Soft",
-    "dark": "One Dark",
+    "dark": "Nordfox - opaque",
   },
   "languages": {
     "Nix": {

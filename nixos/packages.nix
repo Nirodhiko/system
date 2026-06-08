@@ -1,7 +1,46 @@
 { config, pkgs, ... }:
 
+let
+  codewhale = pkgs.stdenv.mkDerivation rec {
+    pname = "codewhale";
+    version = "0.8.53";
+
+    src_codewhale = pkgs.fetchurl {
+      url = "https://github.com/Hmbown/CodeWhale/releases/download/v${version}/codewhale-linux-x64";
+      sha256 = "57104d1f6a38884924d0fae7b991c33c40a3be6f8045747d4ff055f10aaf62dc";
+    };
+
+    src_codewhale_tui = pkgs.fetchurl {
+      url = "https://github.com/Hmbown/CodeWhale/releases/download/v${version}/codewhale-tui-linux-x64";
+      sha256 = "0c189693873840587f04a3e51b96b72a41f4653c4d420a99ec85b01f839a104c";
+    };
+
+    nativeBuildInputs = with pkgs; [ autoPatchelfHook ];
+    buildInputs = with pkgs; [ stdenv.cc.cc.lib zlib dbus ];
+
+    dontUnpack = true;
+    dontBuild = true;
+
+    installPhase = ''
+      mkdir -p $out/bin
+      cp $src_codewhale $out/bin/codewhale
+      cp $src_codewhale_tui $out/bin/codewhale-tui
+      chmod +x $out/bin/codewhale $out/bin/codewhale-tui
+    '';
+
+    meta = with pkgs.lib; {
+      description = "DeepSeek + MiMo coding agent in terminal";
+      homepage = "https://github.com/Hmbown/CodeWhale";
+      license = licenses.mit;
+      platforms = [ "x86_64-linux" ];
+      mainProgram = "codewhale";
+    };
+  };
+in
+
 {
   environment.systemPackages = with pkgs; [
+    codewhale
     # Dev tooling
     nixd # Nix language server for IDE support
     nodejs
