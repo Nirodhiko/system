@@ -396,8 +396,10 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^io.github.xiaoyifang.goldendict_ng$"#
+    match app-id=r#"^GoldenDict-ng$"#
     open-floating true
+    default-column-width { fixed 900; }
+    default-window-height { fixed 600; }
 }
 
 binds {
@@ -419,8 +421,10 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+Z hotkey-overlay-title="Run Zeditor: zeditor" { spawn "zeditor"; }
     Mod+G hotkey-overlay-title="Run Chrome: chrome" { spawn "google-chrome"; }
+    Mod+D hotkey-overlay-title="Look up selection" {
+        spawn "sh" "-c" "goldendict \"$(wl-paste)\"";
+    }
     Mod+Q hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+D hotkey-overlay-title="Run Goldendict: goldendict" { spawn "goldendict"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+B { spawn-sh "pkill waybar || exec waybar"; }
 

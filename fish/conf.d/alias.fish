@@ -36,6 +36,10 @@ abbr -a sl -- journalctl -b 0 -p 4
 abbr -a nt -- nixos-rebuild build-vm
 abbr -a nr -- sudo nixos-rebuild switch
 abbr -a no -- nix store optimise
+abbr -a nu -- sudo nix-channel update
+
+# niri
+abbr -a nw -- niri msg windows
 
 # usb
 abbr -a us -- udisksctl status
