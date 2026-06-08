@@ -42,9 +42,9 @@ link "$SYSTEM_DIR/.gitconfig" "$HOME/.gitconfig"
 # Rime (fcitx5 input method data)
 link "$SYSTEM_DIR/rime" "$HOME/.local/share/fcitx5/rime"
 
-# NixOS configuration (requires root)
-log "linking NixOS configuration (sudo required)"
-sudo ln -sfn "$SYSTEM_DIR/nixos/configuration.nix" /etc/nixos/configuration.nix
-log "/etc/nixos/configuration.nix -> $SYSTEM_DIR/nixos/configuration.nix"
+# NixOS configuration — now managed via flakes.
+# Rebuild with: sudo nixos-rebuild switch --flake "$SYSTEM_DIR/nixos#nixos"
+log "NixOS flake ready at $SYSTEM_DIR/nixos/flake.nix"
+log "To rebuild: sudo nixos-rebuild switch --flake $SYSTEM_DIR/nixos#nixos"
 
 log "Done."

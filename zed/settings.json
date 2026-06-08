@@ -16,6 +16,9 @@
   "agent": {
     "tool_permissions": {
       "tools": {
+        "mcp:mcp-server-context7:query-docs": {
+          "default": "allow"
+        },
         "terminal": {
           "default": "allow"
         },
