@@ -8,6 +8,7 @@
     ./fonts.nix
     ./packages.nix
     ./users.nix
+    ./variables.nix
   ];
 
   # Hostname & networking
