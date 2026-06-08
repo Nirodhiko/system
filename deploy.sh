@@ -42,9 +42,19 @@ link "$SYSTEM_DIR/.gitconfig" "$HOME/.gitconfig"
 # Rime (fcitx5 input method data)
 link "$SYSTEM_DIR/rime" "$HOME/.local/share/fcitx5/rime"
 
+# hardware-configuration.nix — copy from /etc/nixos so the flake stays
+# in sync with the hardware declared by the running system.
+HW_SRC="/etc/nixos/hardware-configuration.nix"
+HW_DST="$SYSTEM_DIR/nixos/hardware-configuration.nix"
+if [[ -f "$HW_SRC" ]]; then
+  cp -f "$HW_SRC" "$HW_DST"
+  log "$HW_DST <- $HW_SRC"
+else
+  warn "$HW_SRC not found; hardware-configuration.nix was NOT updated"
+fi
+
 # NixOS configuration — now managed via flakes.
 # Rebuild with: sudo nixos-rebuild switch --flake "$SYSTEM_DIR/nixos#nixos"
-log "NixOS flake ready at $SYSTEM_DIR/nixos/flake.nix"
 log "To rebuild: sudo nixos-rebuild switch --flake $SYSTEM_DIR/nixos#nixos"
 
 log "Done."
