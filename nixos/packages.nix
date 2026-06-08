@@ -11,6 +11,7 @@
     python312Packages.pip
 
     # Wayland session helpers
+    wev
     wl-clipboard
     swaylock
     swayidle

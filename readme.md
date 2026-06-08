@@ -7,3 +7,5 @@ Hold `Mod` drag with Right Mouse Button anywhere on the window. Move the mouse t
 ## Fix onlyoffice-desktopeditors bug 
 - Copying custom fonts to .local/share/fonts.
 - Run `fc-cache -fv ~/.local/share/fonts`
+
+## Disable `Ctrl+;` shortcut in configuration addon settings of fcitx5.

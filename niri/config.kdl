@@ -395,7 +395,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^GoldenDict-ng$"#
+    match app-id=r#"^io.github.xiaoyifang.goldendict_ng$"#
     open-floating true
     default-column-width { fixed 900; }
     default-window-height { fixed 600; }
