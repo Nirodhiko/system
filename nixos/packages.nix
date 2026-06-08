@@ -7,6 +7,8 @@
     nodejs
     pnpm
     zed-editor
+    python3
+    python312Packages.pip
 
     # Wayland session helpers
     swaylock

@@ -14,13 +14,23 @@
     "dock": "left",
   },
   "agent": {
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "default": "allow"
+        },
+        "fetch": {
+          "default": "allow"
+        }
+      }
+    },
     "default_profile": "write",
     "sidebar_side": "right",
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-opus-4-7",
+      "effort": "max",
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
       "enable_thinking": true,
-      "effort": "xhigh",
     },
     "dock": "right",
     "favorite_models": [],
@@ -39,8 +49,8 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "dark",
-    "light": "GitHub Light",
+    "mode": "light",
+    "light": "Gruvbox Light Soft",
     "dark": "One Dark",
   },
   "languages": {
