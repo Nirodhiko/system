@@ -449,6 +449,11 @@ binds {
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
+    // Audio volum control
+    Mod+Alt+Equal { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "20%+"; }
+    Mod+Alt+Minus { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "20%-"; }
+    Mod+Alt+M     { spawn "wpctl" "set-mute"   "@DEFAULT_AUDIO_SINK@" "toggle"; }
+
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
