@@ -1,4 +1,7 @@
-## NixOS configuration (flake-based)
+## NixOS update
+nix flake update
+
+## NixOS rebuild
 sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
 
 ## Adjusting float window size in niri

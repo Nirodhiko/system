@@ -1,7 +1,7 @@
 [general]
 import = [
-  # "themes/dayfox.toml",
-  "themes/moonfly.toml",
+  "themes/dayfox.toml",
+  # "themes/moonfly.toml",
 ]
 
 [window]
