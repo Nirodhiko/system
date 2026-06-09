@@ -40,7 +40,9 @@ in
 
 {
   environment.systemPackages = with pkgs; [
+    # Ai
     codewhale
+
     # Dev tooling
     nixd # Nix language server for IDE support
     nodejs
@@ -74,6 +76,10 @@ in
     unzip
     unrar
     p7zip
+
+    # Video
+    mpv
+    celluloid
 
     # Apps
     google-chrome

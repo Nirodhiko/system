@@ -3,7 +3,7 @@ abbr -a tt -- ~/.config/alacritty/toggle-theme.sh
 
 
 # ai
-abbr -a ai -- codewhale
+abbr -a ai -- codewhale --model auto
 
 # docker
 abbr -a du -- docker compose up -d
@@ -40,8 +40,9 @@ abbr -a si -- btop
 abbr -a sl -- journalctl -b 0 -p 4
 
 # nixos
-abbr -a nt -- nixos-rebuild build-vm
-abbr -a nr -- sudo nixos-rebuild switch
+
+abbr -a nr -- sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
+abbr -a nt -- nixos-rebuild test --flake $HOME/system/nixos#nixos
 abbr -a no -- nix store optimise
 abbr -a nu -- sudo nix-channel update
 
