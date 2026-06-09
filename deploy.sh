@@ -45,6 +45,9 @@ link "$SYSTEM_DIR/rime" "$HOME/.local/share/fcitx5/rime"
 # Download alacritty themes to $HOME/.config/alacritty/themes if it doesn't exist.
 if [[ ! -d "$HOME/.config/alacritty/themes" ]]; then
   git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+  # move the themes to the correct directory
+  mv ~/.config/alacritty/themes/themes/* ~/.config/alacritty/themes/
+  rm -rf ~/.config/alacritty/themes/themes
 fi
 
 # hardware-configuration.nix — copy from /etc/nixos so the flake stays

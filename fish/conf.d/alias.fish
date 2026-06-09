@@ -1,3 +1,7 @@
+# theme
+abbr -a tt -- ~/.config/alacritty/toggle-theme.sh
+
+
 # ai
 abbr -a ai -- codewhale
 

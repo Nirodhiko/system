@@ -23,4 +23,10 @@
       "ctrl-' ctrl-'": "editor::ToggleFocus",
     },
   },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-shift-pageup": "theme::ToggleMode"
+    }
+  }
 ]

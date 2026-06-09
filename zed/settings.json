@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": {
+    "mode": "light",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
   "cli_default_open_behavior": "existing_window",
   "buffer_font_family": ".ZedMono",
   "ui_font_family": ".ZedSans",
@@ -17,15 +22,15 @@
     "tool_permissions": {
       "tools": {
         "mcp:mcp-server-context7:query-docs": {
-          "default": "allow"
+          "default": "allow",
         },
         "terminal": {
-          "default": "allow"
+          "default": "allow",
         },
         "fetch": {
-          "default": "allow"
-        }
-      }
+          "default": "allow",
+        },
+      },
     },
     "default_profile": "write",
     "sidebar_side": "right",
@@ -54,7 +59,7 @@
   "theme": {
     "mode": "light",
     "light": "Catppuccin Latte - No Italics",
-    "dark": "Nordfox - opaque",
+    "dark": "Catppuccin Mocha - No Italics",
   },
   "languages": {
     "Nix": {
