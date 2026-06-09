@@ -14,8 +14,8 @@ end
 
 # pnpm
 set -gx PNPM_HOME ~/.local/share/pnpm
-if set -q PNPM_HOME; and not string match -q -- $PNPM_HOME $PATH
-    fish_add_path $PNPM_HOME
+if set -q PNPM_HOME; and not string match -q -- $PNPM_HOME/bin $PATH
+    fish_add_path $PNPM_HOME/bin
 end
 # pnpm end
 

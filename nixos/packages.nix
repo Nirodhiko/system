@@ -3,16 +3,16 @@
 let
   codewhale = pkgs.stdenv.mkDerivation rec {
     pname = "codewhale";
-    version = "0.8.53";
+    version = "0.8.55";
 
     src_codewhale = pkgs.fetchurl {
       url = "https://github.com/Hmbown/CodeWhale/releases/download/v${version}/codewhale-linux-x64";
-      sha256 = "57104d1f6a38884924d0fae7b991c33c40a3be6f8045747d4ff055f10aaf62dc";
+      sha256 = "8f09f7aca0dd6bb9dfb5a34ba8c5cd83eb6389cb21382e2cd7b4ad7d2c93b845";
     };
 
     src_codewhale_tui = pkgs.fetchurl {
       url = "https://github.com/Hmbown/CodeWhale/releases/download/v${version}/codewhale-tui-linux-x64";
-      sha256 = "0c189693873840587f04a3e51b96b72a41f4653c4d420a99ec85b01f839a104c";
+      sha256 = "d42c687eef7ce91d61c7503544d2eabd11ab985218be244891d3bfa70f8b225f";
     };
 
     nativeBuildInputs = with pkgs; [ autoPatchelfHook ];
