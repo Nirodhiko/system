@@ -1,6 +1,9 @@
 [general]
 import = [
-  "themes/tokyonight_night.toml",
+  # "themes/themes/catppuccin_macchiato.toml",
+  "themes/themes/dayfox.toml",
+  # "themes/themes/nightfox.toml",
+  # "themes/themes/moonfly.toml",
 ]
 
 [window]

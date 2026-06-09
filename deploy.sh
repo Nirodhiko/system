@@ -42,6 +42,11 @@ link "$SYSTEM_DIR/.gitconfig" "$HOME/.gitconfig"
 # Rime (fcitx5 input method data)
 link "$SYSTEM_DIR/rime" "$HOME/.local/share/fcitx5/rime"
 
+# Download alacritty themes to $HOME/.config/alacritty/themes if it doesn't exist.
+if [[ ! -d "$HOME/.config/alacritty/themes" ]]; then
+  git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+fi
+
 # hardware-configuration.nix — copy from /etc/nixos so the flake stays
 # in sync with the hardware declared by the running system.
 HW_SRC="/etc/nixos/hardware-configuration.nix"

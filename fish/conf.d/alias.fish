@@ -1,3 +1,6 @@
+# ai
+abbr -a ai -- codewhale
+
 # docker
 abbr -a du -- docker compose up -d
 abbr -a ds -- docker compose stop
