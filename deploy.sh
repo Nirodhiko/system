@@ -32,7 +32,7 @@ link() {
 }
 
 # ~/.config/<name>
-for entry in alacritty fish niri sioyek swayimg swaylock waybar wallpapers zed; do
+for entry in alacritty fish niri sioyek swayimg swaylock waybar wallpapers; do
   link "$SYSTEM_DIR/$entry" "$HOME/.config/$entry"
 done
 
@@ -41,6 +41,14 @@ link "$SYSTEM_DIR/.gitconfig" "$HOME/.gitconfig"
 
 # Rime (fcitx5 input method data)
 link "$SYSTEM_DIR/rime" "$HOME/.local/share/fcitx5/rime"
+
+# Opencode
+link "$SYSTEM_DIR/ai/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
+link "$SYSTEM_DIR/ai/AGENTS.md" "$HOME/.config/opencode/AGENTS.md"
+
+# Zed
+link "$SYSTEM_DIR/zed/keymaps.json" "$HOME/.config/zed/keymaps.json"
+link "$SYSTEM_DIR/zed/settings.json" "$HOME/.config/zed/settings.json"
 
 # Download alacritty themes to $HOME/.config/alacritty/themes if it doesn't exist.
 if [[ ! -d "$HOME/.config/alacritty/themes" ]]; then

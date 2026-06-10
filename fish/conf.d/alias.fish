@@ -3,7 +3,7 @@ abbr -a tt -- ~/.config/alacritty/toggle-theme.sh
 
 
 # ai
-abbr -a ai -- codewhale --model auto
+abbr -a ai -- opencode
 
 # docker
 abbr -a du -- docker compose up -d

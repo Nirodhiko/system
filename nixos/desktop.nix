@@ -18,6 +18,12 @@
   programs.niri.enable = true;
   programs.fish.enable = true;
   programs.git.enable = true;
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      obs-advanced-masks
+    ];
+  };
 
   # Audio: PipeWire stack
   services.pulseaudio.enable = false;
