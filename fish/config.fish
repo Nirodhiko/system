@@ -1,8 +1,3 @@
-# default editor
-set -gx EDITOR "zeditor"
-set -gx VISUAL "zeditor"
-# default editor end
-
 # load env
 function load_env -d "Load variables in a .env file"
     for i in (cat ~/.env)
