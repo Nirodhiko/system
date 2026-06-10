@@ -1,6 +1,6 @@
 # default editor
 set -gx EDITOR "zeditor"
-set -gx VISUAL "zedditor"
+set -gx VISUAL "zeditor"
 # default editor end
 
 # load env
