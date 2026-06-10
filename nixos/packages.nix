@@ -29,6 +29,7 @@
 
     # Terminal & shell tools
     alacritty
+    nautilus
     yazi
     wget
     btop

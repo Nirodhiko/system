@@ -51,8 +51,8 @@ abbr -a nw -- niri msg windows
 
 # usb
 abbr -a us -- udisksctl status
-abbr -a um -- udisksctl mount -b /dev/sdb1
-abbr -a uu -- udisksctl unmount -b /dev/sdb1
+abbr -a um -- udisksctl mount -b /dev/sda1
+abbr -a uu -- udisksctl unmount -b /dev/sda1
 
 # wifi
 abbr -a wo -- nmcli device wifi on

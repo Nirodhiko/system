@@ -423,6 +423,7 @@ binds {
     Mod+D hotkey-overlay-title="Look up selection" {
         spawn "sh" "-c" "goldendict \"$(wl-paste)\"";
     }
+    Mod+T { spawn-sh "pkill nautilus || exec nautilus"; }
     Mod+Q hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+B { spawn-sh "pkill waybar || exec waybar"; }
