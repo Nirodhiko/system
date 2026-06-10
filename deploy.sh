@@ -45,6 +45,7 @@ link "$SYSTEM_DIR/rime" "$HOME/.local/share/fcitx5/rime"
 # Opencode
 link "$SYSTEM_DIR/ai/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
 link "$SYSTEM_DIR/ai/AGENTS.md" "$HOME/.config/opencode/AGENTS.md"
+link "$SYSTEM_DIR/ai/oh-my-openagent.json" "$HOME/.config/opencode/oh-my-openagent.json"
 
 # Zed
 link "$SYSTEM_DIR/zed/keymap.json" "$HOME/.config/zed/keymap.json"
