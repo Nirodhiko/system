@@ -58,3 +58,13 @@ abbr -a uu -- udisksctl unmount -b /dev/sdb1
 abbr -a wo -- nmcli device wifi on
 abbr -a wl -- nmcli device wifi list
 abbr -a wc -- nmcli device wifi connect
+
+# file manager
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	command yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
+		builtin cd -- "$cwd"
+	end
+	command rm -f -- "$tmp"
+end

@@ -29,6 +29,7 @@
 
     # Terminal & shell tools
     alacritty
+    yazi
     wget
     btop
     ncdu

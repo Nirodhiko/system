@@ -13,7 +13,7 @@ set -euo pipefail
 # ── Configuration ────────────────────────────────────────────────────────────
 # Customize these to use your preferred theme pair.
 DAY_THEME="themes/dayfox.toml"
-NIGHT_THEME="themes/moonfly.toml"
+NIGHT_THEME="themes/night_owl.toml"
 CONFIG_FILE="${HOME}/.config/alacritty/alacritty.toml"
 
 # ── Helpers ──────────────────────────────────────────────────────────────────

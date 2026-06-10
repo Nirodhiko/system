@@ -50,6 +50,7 @@ link "$SYSTEM_DIR/ai/oh-my-openagent.json" "$HOME/.config/opencode/oh-my-openage
 # Zed
 link "$SYSTEM_DIR/zed/keymap.json" "$HOME/.config/zed/keymap.json"
 link "$SYSTEM_DIR/zed/settings.json" "$HOME/.config/zed/settings.json"
+link "$SYSTEM_DIR/ai/AGENTS.md" "$HOME/.config/zed/AGENTS.md"
 
 # Download alacritty themes to $HOME/.config/alacritty/themes if it doesn't exist.
 if [[ ! -d "$HOME/.config/alacritty/themes" ]]; then
