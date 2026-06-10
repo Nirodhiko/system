@@ -14,7 +14,8 @@
     ];
   };
 
-  # Wayland compositor & shell tools
+  # Wayland compositor & shell tools & Nix LD
+  programs.nix-ld.enable = true;
   programs.niri.enable = true;
   programs.fish.enable = true;
   programs.git.enable = true;
