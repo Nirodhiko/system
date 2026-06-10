@@ -1,10 +1,10 @@
 {
+  "plugin": ["oh-my-openagent@latest"],
   "$schema": "https://opencode.ai/config.json",
   "model": "deepseek/deepseek-v4-pro",
   "small_model": "deepseek/deepseek-v4-flash",
   "default_agent": "plan",
   "watcher": {
-    "ignore": ["node_modules/**", "dist/**", ".git/**"]
+    "ignore": ["node_modules/**", "dist/**", ".git/**"],
   },
-  "instructions": [ "docs/guidelines.md", ".cursor/rules/*.md"]
 }
