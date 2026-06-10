@@ -21,6 +21,7 @@ rules = [
   { mime = "{audio,video}/*", use = [ "play", "reveal" ] },
   # Code
   { mime = "application/{json,ndjson,javascript,wine-extension-ini}", use = [ "edit", "reveal" ] },
+  # Pdf
   { mime = "application/pdf", use = [ "pdf", "reveal" ] },
   # Fallback
   { url = "*", use = [ "open", "reveal" ] },

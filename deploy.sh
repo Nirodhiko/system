@@ -60,6 +60,16 @@ if [[ ! -d "$HOME/.config/alacritty/themes" ]]; then
   rm -rf ~/.config/alacritty/themes/themes
 fi
 
+# Install Yazi catppuccin-mocha flavor if not already present.
+if [[ ! -d "$HOME/.config/yazi/flavors/catppuccin-mocha.yazi" ]]; then
+  log "Installing Yazi flavor: catppuccin-mocha"
+  mkdir -p "$HOME/.config/yazi/flavors"
+  rm -rf /tmp/yazi-flavors
+  git clone https://github.com/yazi-rs/flavors.git /tmp/yazi-flavors
+  cp -r /tmp/yazi-flavors/catppuccin-mocha.yazi "$HOME/.config/yazi/flavors/catppuccin-mocha.yazi"
+  rm -rf /tmp/yazi-flavors
+fi
+
 # hardware-configuration.nix — copy from /etc/nixos so the flake stays
 # in sync with the hardware declared by the running system.
 HW_SRC="/etc/nixos/hardware-configuration.nix"
