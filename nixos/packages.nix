@@ -24,6 +24,8 @@
     xwayland-satellite
     sway-contrib.grimshot
     swappy
+    grim
+    slurp
     swayimg
     brightnessctl
 
