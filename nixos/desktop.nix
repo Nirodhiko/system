@@ -55,4 +55,10 @@
       fcitx5-rime
     ];
   };
+
+  # Text expander (Wayland variant for niri)
+  services.espanso = {
+    enable = true;
+    package = pkgs.espanso-wayland;
+  };
 }

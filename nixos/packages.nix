@@ -57,6 +57,7 @@
     foliate
     sioyek
     goldendict-ng
+    typora
 
     # Theming
     adwaita-icon-theme

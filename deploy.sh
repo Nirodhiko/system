@@ -32,7 +32,7 @@ link() {
 }
 
 # ~/.config/<name>
-for entry in alacritty fish niri sioyek swayimg swaylock waybar wallpapers yazi; do
+for entry in alacritty fish niri sioyek swayimg swaylock waybar wallpapers yazi espanso; do
   link "$SYSTEM_DIR/$entry" "$HOME/.config/$entry"
 done
 
