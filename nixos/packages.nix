@@ -26,7 +26,7 @@
     swappy
     grim
     slurp
-    mako
+    swaynotificationcenter
     swayimg
     brightnessctl
 
