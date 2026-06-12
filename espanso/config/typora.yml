@@ -1,3 +1,4 @@
+# https://espanso.org/docs/configuration/app-specific-configurations/
 filter_title: "Typora"
 extra_includes:
   - "../match/_typora.yml"

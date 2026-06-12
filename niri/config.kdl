@@ -285,7 +285,8 @@ layout {
 // Idle management: lock after 15 min, suspend after 30 min, lock before any sleep
 spawn-sh-at-startup "swayidle -w timeout 900 'swaylock -f' timeout 1800 'systemctl suspend' before-sleep 'swaylock -f'"
 spawn-sh-at-startup "swaybg -i $HOME/.config/wallpapers/2.png -m fill &"
-// spawn-sh-at-startup "wechat-uos"
+spawn-sh-at-startup "mako"
+//spawn-sh-at-startup "wechat-uos"
 spawn-sh-at-startup "zeditor"
 spawn-sh-at-startup "google-chrome"
 

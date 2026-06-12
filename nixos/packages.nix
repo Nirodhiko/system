@@ -26,6 +26,7 @@
     swappy
     grim
     slurp
+    mako
     swayimg
     brightnessctl
 
