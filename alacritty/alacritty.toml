@@ -1,7 +1,7 @@
 [general]
 import = [
-  # "themes/dayfox.toml",
-  "themes/night_owl.toml",
+  "themes/dayfox.toml",
+  # "themes/night_owl.toml",
 ]
 
 [window]
