@@ -25,8 +25,8 @@ abbr -a pd -- pnpm rm
 abbr -a pc -- pnpm store prune
 
 # zed
-abbr -a v  -- zed
-abbr -a sv -- sudo -E zed
+abbr -a v  -- zeditor
+abbr -a sv -- sudo -E zeditor
 
 # image
 abbr -a iv -- swayimg

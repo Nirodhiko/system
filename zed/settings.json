@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
@@ -21,6 +26,9 @@
   "agent": {
     "tool_permissions": {
       "tools": {
+        "mcp:mcp-server-context7:resolve-library-id": {
+          "default": "allow"
+        },
         "mcp:mcp-server-context7:query-docs": {
           "default": "allow",
         },
@@ -58,8 +66,8 @@
   "buffer_font_size": 15,
   "theme": {
     "mode": "dark",
-    "light": "Catppuccin Latte - No Italics",
-    "dark": "Fleet Dark",
+    "light": "Ayu Light",
+    "dark": "Catppuccin Mocha - No Italics",
   },
   "languages": {
     "Nix": {

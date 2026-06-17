@@ -12,7 +12,7 @@
         ./hardware-configuration.nix
 
         ./boot.nix
-        ./desktop.nix
+        ./services.nix
         ./fonts.nix
         ./packages.nix
         ./users.nix
