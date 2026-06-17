@@ -32,43 +32,12 @@ link() {
 }
 
 # ~/.config/<name>
-for entry in alacritty espanso fish niri sioyek swayimg swaylock swaync waybar wallpapers yazi; do
+for entry in fish opencode; do
   link "$SYSTEM_DIR/$entry" "$HOME/.config/$entry"
 done
 
 # ~/<dotfile>
 link "$SYSTEM_DIR/.gitconfig" "$HOME/.gitconfig"
-
-# Rime (fcitx5 input method data)
-link "$SYSTEM_DIR/rime" "$HOME/.local/share/fcitx5/rime"
-
-# Opencode
-link "$SYSTEM_DIR/ai/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
-link "$SYSTEM_DIR/ai/AGENTS.md" "$HOME/.config/opencode/AGENTS.md"
-link "$SYSTEM_DIR/ai/oh-my-openagent.json" "$HOME/.config/opencode/oh-my-openagent.json"
-
-# Zed
-link "$SYSTEM_DIR/zed/keymap.json" "$HOME/.config/zed/keymap.json"
-link "$SYSTEM_DIR/zed/settings.json" "$HOME/.config/zed/settings.json"
-link "$SYSTEM_DIR/ai/AGENTS.md" "$HOME/.config/zed/AGENTS.md"
-
-# Download alacritty themes to $HOME/.config/alacritty/themes if it doesn't exist.
-if [[ ! -d "$HOME/.config/alacritty/themes" ]]; then
-  git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
-  # move the themes to the correct directory
-  mv ~/.config/alacritty/themes/themes/* ~/.config/alacritty/themes/
-  rm -rf ~/.config/alacritty/themes/themes
-fi
-
-# Install Yazi catppuccin-mocha flavor if not already present.
-if [[ ! -d "$HOME/.config/yazi/flavors/catppuccin-mocha.yazi" ]]; then
-  log "Installing Yazi flavor: catppuccin-mocha"
-  mkdir -p "$HOME/.config/yazi/flavors"
-  rm -rf /tmp/yazi-flavors
-  git clone https://github.com/yazi-rs/flavors.git /tmp/yazi-flavors
-  cp -r /tmp/yazi-flavors/catppuccin-mocha.yazi "$HOME/.config/yazi/flavors/catppuccin-mocha.yazi"
-  rm -rf /tmp/yazi-flavors
-fi
 
 # hardware-configuration.nix — copy from /etc/nixos so the flake stays
 # in sync with the hardware declared by the running system.
@@ -80,9 +49,3 @@ if [[ -f "$HW_SRC" ]]; then
 else
   warn "$HW_SRC not found; hardware-configuration.nix was NOT updated"
 fi
-
-# NixOS configuration — now managed via flakes.
-# Rebuild with: sudo nixos-rebuild switch --flake "$SYSTEM_DIR/nixos#nixos"
-log "To rebuild: sudo nixos-rebuild switch --flake $SYSTEM_DIR/nixos#nixos"
-
-log "Done."

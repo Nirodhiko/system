@@ -1,5 +1,0 @@
-{
-  "keyMappings": "# Insert your preferred key mappings here.\nmap <c-h> previousTab\nmap <c-l> nextTab\nmap <c-j> goForward\nmap <c-k> goBack",
-  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ng: https://www.google.com/search?q=%s Google\ny: https://www.youtube.com/results?search_query=%s Youtube\nm: https://www.google.com/maps?q=%s Google maps\n# b: https://www.bing.com/search?q=%s Bing\n# d: https://duckduckgo.com/?q=%s DuckDuckGo\nc: https://github.com/search?q=%s",
-  "settingsVersion": "2.4.2"
-}

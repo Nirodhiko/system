@@ -2,7 +2,7 @@
   description = "Niro's NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -12,9 +12,9 @@
         ./hardware-configuration.nix
 
         ./boot.nix
-        ./desktop.nix
         ./fonts.nix
         ./packages.nix
+        ./services.nix
         ./users.nix
         ./variables.nix
 
@@ -43,9 +43,6 @@
             dates = "weekly";
             options = "--delete-older-than 14d";
           };
-
-          # Clean /tmp on every boot
-          boot.tmp.cleanOnBoot = true;
 
           system.stateVersion = "26.05";
         }
