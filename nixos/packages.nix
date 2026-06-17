@@ -10,7 +10,6 @@
     pnpm
     python3
     python312Packages.pip
-    vim
 
     # Shell tools
     wget

@@ -18,7 +18,7 @@
   # -----------------------------------------------------------------------
   # Kernel
   # -----------------------------------------------------------------------
-  boot.kernelPackages = pkgs.linuxPackages_lts;
+  # The NixOS stable default kernel is already an LTS release — no need to override.
 
   # -----------------------------------------------------------------------
   # initrd (early userspace)

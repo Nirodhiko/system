@@ -6,7 +6,10 @@
   # -----------------------------------------------------------------------
   programs.fish.enable = true;
   programs.git.enable = true;
-  programs.vim.defaultEditor = true;
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   # -----------------------------------------------------------------------
   # Services

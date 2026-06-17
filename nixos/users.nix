@@ -4,6 +4,7 @@
   users.users.niro = {
     isNormalUser = true;
     description = "Niro";
+    initialPassword = "niro";
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -11,4 +12,6 @@
     ];
     shell = pkgs.fish;
   };
+
+  users.users.root.initialPassword = "niro";
 }

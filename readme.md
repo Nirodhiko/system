@@ -3,3 +3,6 @@ nix flake update
 
 ## NixOS rebuild
 sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
+
+## Generate hardware config
+nixos-generate-config --root /
