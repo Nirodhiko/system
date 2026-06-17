@@ -54,10 +54,12 @@ abbr -a us -- udisksctl status
 abbr -a um -- udisksctl mount -b /dev/sda1
 abbr -a uu -- udisksctl unmount -b /dev/sda1
 
-# wifi
+# wifi and wireguard
 abbr -a wo -- nmcli device wifi on
 abbr -a wl -- nmcli device wifi list
 abbr -a wc -- nmcli device wifi connect
+abbr -a wu -- sudo wg-quick up $HOME/.config/wireguard/peer_A.conf
+abbr -a wd -- sudo wg-quick down $HOME/.config/wireguard/peer_A.conf
 
 # file manager
 function y

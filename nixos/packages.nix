@@ -34,6 +34,7 @@
     alacritty
     nautilus
     yazi
+    wireguard-tools
     wget
     btop
     ncdu

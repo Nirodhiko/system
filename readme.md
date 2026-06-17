@@ -12,3 +12,5 @@ Hold `Mod` drag with Right Mouse Button anywhere on the window. Move the mouse t
 - Run `fc-cache -fv ~/.local/share/fonts`
 
 ## Disable `Ctrl+;` shortcut in configuration addon settings of fcitx5.
+
+## Copy wireguard config to `~/.config/wireguard/`

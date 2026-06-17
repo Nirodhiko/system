@@ -16,6 +16,7 @@
 
   #
   services.udisks2.enable = true;
+  services.openssh.enable = true;
 
   # Display manager: SDDM on Wayland with the Astronaut theme.
   services.displayManager.sddm = {
