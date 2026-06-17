@@ -6,13 +6,13 @@
   programs.niri.enable = true;
   programs.fish.enable = true;
   programs.git.enable = true;
-  programs.yazi.enable = true;
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs.obs-studio-plugins; [
       obs-advanced-masks
     ];
   };
+
 
   #
   services.udisks2.enable = true;
