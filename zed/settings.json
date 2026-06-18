@@ -7,20 +7,73 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "language_models": {
+    "openai_compatible": {
+      "GLM": {
+        "api_url": "https://open.bigmodel.cn/api/paas/v4/",
+        "available_models": [
+          {
+            "name": "glm-5.2",
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+            },
+          },
+        ],
+      },
+    },
+  },
+  "edit_predictions": {
+    "provider": "open_ai_compatible_api",
+    "open_ai_compatible_api": {
+      "prompt_format": "infer",
+      "model": "glm-5.2",
+      "api_url": "https://open.bigmodel.cn/api/paas/v4/",
+    },
+  },
+  "ssh_connections": [
+    {
+      "host": "nirodhiko.link",
+      "username": "ec2-user",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/ec2-user/docker"],
+        },
+      ],
+    },
+    {
+      "host": "nirodhiko.link",
+      "username": "ec2-user",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "nirodhiko.link",
+      "username": "ec2-user",
+      "args": [],
+      "projects": [],
+    },
+  ],
   "agent_servers": {
     "opencode": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
-    }
+      "milliseconds": 1000,
+    },
   },
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
-    "dark": "Material Icon Theme"
+    "dark": "Material Icon Theme",
   },
   "cli_default_open_behavior": "existing_window",
   "buffer_font_family": ".ZedMono",
@@ -31,8 +84,11 @@
   "agent": {
     "tool_permissions": {
       "tools": {
+        "skill": {
+          "default": "allow",
+        },
         "mcp:mcp-server-context7:resolve-library-id": {
-          "default": "allow"
+          "default": "allow",
         },
         "mcp:mcp-server-context7:query-docs": {
           "default": "allow",
@@ -48,10 +104,9 @@
     "default_profile": "write",
     "sidebar_side": "right",
     "default_model": {
-      "effort": "high",
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
-      "enable_thinking": true,
+      "provider": "GLM",
+      "model": "glm-5.2",
+      "enable_thinking": false,
     },
     "dock": "right",
     "favorite_models": [],
