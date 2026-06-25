@@ -29,7 +29,7 @@
     },
   },
   "edit_predictions": {
-    "provider": "open_ai_compatible_api",
+    "provider": "zed",
     "open_ai_compatible_api": {
       "prompt_format": "infer",
       "model": "glm-5.2",
@@ -39,26 +39,16 @@
   "ssh_connections": [
     {
       "host": "nirodhiko.link",
-      "username": "ec2-user",
+      "username": "admin",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/ec2-user/docker"],
-        },
-      ],
-    },
-    {
-      "host": "nirodhiko.link",
-      "username": "ec2-user",
-      "args": [],
-      "projects": [],
-    },
-    {
-      "host": "nirodhiko.link",
-      "username": "ec2-user",
-      "args": [],
-      "projects": [],
-    },
+          "paths": [
+            "/home/admin/docker"
+          ]
+        }
+      ]
+    }
   ],
   "agent_servers": {
     "opencode": {
@@ -104,9 +94,10 @@
     "default_profile": "write",
     "sidebar_side": "right",
     "default_model": {
-      "provider": "GLM",
-      "model": "glm-5.2",
-      "enable_thinking": false,
+      "effort": "high",
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
+      "enable_thinking": true,
     },
     "dock": "right",
     "favorite_models": [],
@@ -125,8 +116,8 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "dark",
-    "light": "Ayu Light",
+    "mode": "light",
+    "light": "Dracula Light (Alucard",
     "dark": "Catppuccin Mocha - No Italics",
   },
   "languages": {

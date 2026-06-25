@@ -14,6 +14,9 @@
   };
 
 
+  # Docker container runtime
+  virtualisation.docker.enable = true;
+
   #
   services.udisks2.enable = true;
   services.openssh.enable = true;

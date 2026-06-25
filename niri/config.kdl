@@ -695,7 +695,7 @@ binds {
     Alt+Print { screenshot-window; }
 
     // Screenshot area -> edit in swappy (annotation tool)
-    Mod+Shift+S { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
+    Mod+Shift+S { spawn-sh "grim -g \"$(slurp)\" ~/Pictures/last.png && swappy -f ~/Pictures/last.png -o ~/Pictures/last.png"; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
