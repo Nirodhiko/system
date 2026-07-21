@@ -19,6 +19,9 @@
         ./variables.nix
 
         {
+          # Hardware
+          hardware.enableRedistributableFirmware = true;
+
           # Hostname & networking
           networking.hostName = "nixos";
           networking.networkmanager.enable = true;
