@@ -1,10 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  # Wayland compositor & shell tools & Nix LD
+  # Desktop environment & shell tools & Nix LD
   programs.nix-ld.enable = true;
-  programs.niri.enable = true;
   programs.fish.enable = true;
+
+  # GNOME desktop
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
+
   programs.git.enable = true;
   programs.obs-studio = {
     enable = true;
@@ -13,26 +17,11 @@
     ];
   };
 
-
   # Docker container runtime
   virtualisation.docker.enable = true;
 
-  #
   services.udisks2.enable = true;
   services.openssh.enable = true;
-
-  # Display manager: SDDM on Wayland with the Astronaut theme.
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-    package = pkgs.kdePackages.sddm; # Qt 6 build (recommended)
-    theme = "sddm-astronaut-theme";
-    extraPackages = with pkgs.kdePackages; [
-      qtsvg
-      qtmultimedia
-      qtvirtualkeyboard
-    ];
-  };
 
   # Audio: PipeWire stack
   services.pulseaudio.enable = false;
@@ -53,13 +42,13 @@
     };
   };
 
-  # Text expander (Wayland variant for niri)
+  # Text expander (Wayland)
   services.espanso = {
     enable = true;
     package = pkgs.espanso-wayland;
   };
 
-    # Input method: fcitx5 with Rime
+  # Input method: fcitx5 with Rime
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";

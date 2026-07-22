@@ -72,6 +72,11 @@
     "dock": "left",
   },
   "agent": {
+    "sandbox_permissions": {
+      "network_hosts": [
+        "wiki.nixos.org"
+      ]
+    },
     "tool_permissions": {
       "tools": {
         "skill": {
@@ -94,7 +99,7 @@
     "default_profile": "write",
     "sidebar_side": "right",
     "default_model": {
-      "effort": "high",
+      "effort": "max",
       "provider": "deepseek",
       "model": "deepseek-v4-pro",
       "enable_thinking": true,

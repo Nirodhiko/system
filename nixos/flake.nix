@@ -16,7 +16,7 @@
         ./fonts.nix
         ./packages.nix
         ./users.nix
-        ./variables.nix
+        ./environment.nix
 
         {
           # Hardware
