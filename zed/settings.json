@@ -74,7 +74,8 @@
   "agent": {
     "sandbox_permissions": {
       "network_hosts": [
-        "wiki.nixos.org"
+        "wiki.nixos.org",
+        "raw.githubusercontent.com"
       ]
     },
     "tool_permissions": {
