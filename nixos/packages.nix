@@ -40,6 +40,17 @@
     mpv
     celluloid
 
+    # GNOME extensions
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.burn-my-windows
+    gnomeExtensions.appindicator
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.just-perfection
+    gnomeExtensions.user-themes
+
+    # GNOME tools
+    gnome-tweaks
+
     # Apps
     google-chrome
     wechat-uos

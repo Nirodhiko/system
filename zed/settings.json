@@ -75,7 +75,9 @@
     "sandbox_permissions": {
       "network_hosts": [
         "wiki.nixos.org",
-        "raw.githubusercontent.com"
+        "raw.githubusercontent.com",
+        "extensions.gnome.org",
+        "search.nixos.org"
       ]
     },
     "tool_permissions": {

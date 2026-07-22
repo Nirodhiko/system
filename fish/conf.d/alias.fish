@@ -40,7 +40,6 @@ abbr -a si -- btop
 abbr -a sl -- journalctl -b 0 -p 4
 
 # nixos
-
 abbr -a nr -- sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
 abbr -a nt -- nixos-rebuild test --flake $HOME/system/nixos#nixos
 abbr -a no -- nix store optimise
