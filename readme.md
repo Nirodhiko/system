@@ -18,3 +18,6 @@ sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
 ## Themes
 - Cursor: Bibata
 - Icons: Reversal
+
+## Goldendict
+- shortcut: sh -c 'goldendict "$(wl-paste --primary)"'
