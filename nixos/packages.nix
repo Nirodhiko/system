@@ -1,11 +1,5 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
-let
-  unstable = import inputs.nixpkgs-unstable {
-    system = pkgs.system;
-    config.allowUnfree = true;
-  };
-in
 {
   environment.systemPackages = with pkgs; [
     # Ai
@@ -15,7 +9,7 @@ in
     nixd # Nix language server for IDE support
     nodejs
     pnpm
-    unstable.zed-editor
+    zed-editor
     python3
     python312Packages.pip
 
@@ -52,7 +46,6 @@ in
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-dock
     gnomeExtensions.just-perfection
-    gnomeExtensions.no-titlebar-when-maximized
     gnomeExtensions.user-themes
 
     # GNOME tools
