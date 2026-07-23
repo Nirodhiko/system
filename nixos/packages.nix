@@ -1,5 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
+let
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.system;
+    config.allowUnfree = true;
+  };
+in
 {
   environment.systemPackages = with pkgs; [
     # Ai
@@ -9,7 +15,7 @@
     nixd # Nix language server for IDE support
     nodejs
     pnpm
-    zed-editor
+    unstable.zed-editor
     python3
     python312Packages.pip
 
