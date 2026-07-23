@@ -46,6 +46,7 @@
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-dock
     gnomeExtensions.just-perfection
+    gnomeExtensions.no-titlebar-when-maximized
     gnomeExtensions.user-themes
 
     # GNOME tools
@@ -62,6 +63,5 @@
     sioyek
     goldendict-ng
     typora
-
   ];
 }

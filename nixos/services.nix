@@ -42,12 +42,6 @@
     };
   };
 
-  # Text expander (Wayland)
-  services.espanso = {
-    enable = true;
-    package = pkgs.espanso-wayland;
-  };
-
   # Input method: fcitx5 with Rime
   i18n.inputMethod = {
     enable = true;

@@ -1,11 +1,11 @@
 [general]
-import = [
-  "themes/dayfox.toml",
-  # "themes/night_owl.toml",
+  import = [
+   "themes/dayfox.toml",
+   # "themes/night_owl.toml",
 ]
 
 [window]
-#startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 
 [window.padding]
 x = 15
