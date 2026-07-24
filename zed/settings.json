@@ -77,7 +77,10 @@
         "wiki.nixos.org",
         "raw.githubusercontent.com",
         "extensions.gnome.org",
-        "search.nixos.org"
+        "search.nixos.org",
+        "github.com",
+        "api.nixos.org",
+        "ghostty.org"
       ]
     },
     "tool_permissions": {

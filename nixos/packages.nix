@@ -23,8 +23,7 @@
     brightnessctl
 
     # Terminal & shell tools
-    alacritty
-    yazi
+    ghostty
     wireguard-tools
     wget
     btop

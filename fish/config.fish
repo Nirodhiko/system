@@ -14,9 +14,6 @@ if set -q PNPM_HOME; and not string match -q -- $PNPM_HOME/bin $PATH
 end
 # pnpm end
 
-# Enable vi key bindings
-fish_vi_key_bindings
-
 # key bingds
 bind \cl forward-bigword
 bind \ch backward-bigword
