@@ -1,6 +1,6 @@
 theme = Ayu Light
 
-fullscreen = true
+fullscreen = false
 window-padding-x = 15
 shell-integration = fish
 shell-integration-features = no-cursor
