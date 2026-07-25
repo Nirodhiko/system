@@ -16,6 +16,7 @@
     # Wayland session helpers
     wev
     wl-clipboard
+    xdotool
     swappy
     grim
     slurp
@@ -40,6 +41,7 @@
     celluloid
 
     # GNOME extensions
+    gnomeExtensions.hide-cursor
     gnomeExtensions.blur-my-shell
     gnomeExtensions.burn-my-windows
     gnomeExtensions.appindicator
@@ -59,6 +61,7 @@
     sigil
     foliate
     sioyek
+    zathura
     goldendict-ng
     typora
   ];

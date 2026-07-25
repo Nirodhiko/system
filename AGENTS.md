@@ -24,19 +24,29 @@ sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos # rebuild & switch Ni
 
 | Source | Destination |
 |---|---|
-| `alacritty/` `fish/` `niri/` `sioyek/` `swayimg/` `swaylock/` `waybar/` `wallpapers/` `zed/` | `~/.config/<name>` |
+| `fish/` `ghostty/` `sioyek/` `swayimg/` `zathura/` | `~/.config/<name>` |
 | `.gitconfig` | `~/.gitconfig` |
 | `rime/` | `~/.local/share/fcitx5/rime` |
+| `ai/opencode.jsonc` | `~/.config/opencode/opencode.jsonc` |
+| `ai/AGENTS.md` | `~/.config/opencode/AGENTS.md` + `~/.config/zed/AGENTS.md` |
+| `ai/oh-my-openagent.json` | `~/.config/opencode/oh-my-openagent.json` |
+| `zed/keymap.json` | `~/.config/zed/keymap.json` |
+| `zed/settings.json` | `~/.config/zed/settings.json` |
 
 ## NixOS module layout
 
 `nixos/flake.nix` is the entry point. It imports these modules in order:
-`hardware-configuration.nix` → `boot.nix` → `desktop.nix` → `fonts.nix` → `packages.nix` → `users.nix` → `variables.nix` → inline hostname/locale/gc config.
+`hardware-configuration.nix` → `boot.nix` → `services.nix` → `fonts.nix` → `packages.nix` → `users.nix` → `environment.nix` → inline hostname/locale/gc config.
 
-- **`packages.nix`** is where system-level packages are declared.
-- **`desktop.nix`** enables SDDM, niri (Wayland compositor), fish, PipeWire, keyd (caps→ctrl/esc), and fcitx5.
-- **`fonts.nix`** loads system fonts + any `.ttf`/`.otf`/`.ttc` files dropped into `nixos/fonts/`.
-- **`users.nix`** defines a single user `niro` with fish as default shell.
+- **`packages.nix`** — system-level packages (dev tools, Wayland helpers, apps).
+- **`services.nix`** — enables GDM, GNOME, fish, PipeWire, keyd (caps→ctrl/esc), fcitx5, Docker, openssh, git, and obs-studio.
+- **`fonts.nix`** — system fonts + any `.ttf`/`.otf`/`.ttc` files dropped into `nixos/fonts/`.
+- **`users.nix`** — single user `niro` with fish as default shell.
+- **`environment.nix`** — shell registration, XIM/env vars (`EDITOR=zeditor`).
+
+## Desktop environment
+
+**GNOME** via GDM (`services.nix`). Not niri — the old niri reference has been removed.
 
 ## Gitignored generated files
 
@@ -44,12 +54,11 @@ These are machine-specific or auto-generated and are gitignored:
 - `nixos/hardware-configuration.nix`
 - `fish/fish_variables`, `fish/conf.d/fish_frozen_theme.fish`
 - `rime/build/`, `rime/*.userdb`, `rime/user.yaml`, `rime/sync/`
-- `themes/` (alacritty themes cloned by deploy.sh)
 
-## Alacritty themes
+## Zathura fullscreen
 
-`deploy.sh` clones `alacritty-theme` into `~/.config/alacritty/themes/` if absent. That directory is not tracked in this repo (gitignored). The alacritty config references themes from there.
+The `fish/functions/zathura.fish` wrapper starts zathura under XWayland (`GDK_BACKEND=x11`) and immediately sends F11 via `xdotool` to enter fullscreen. Requires `xdotool` (declared in `packages.nix`). GNOME/Mutter does not support the Wayland virtual-keyboard protocol, so `wtype` cannot be used.
 
 ## zed/AGENTS.md
 
-This file in `zed/` is a personal AI chat personality prompt for the zed editor. It is not repo documentation and should not be relied on for repo guidance.
+This file in `zed/` is a personal AI chat personality prompt for the Zed editor. It is not repo documentation and should not be relied on for repo guidance.

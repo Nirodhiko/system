@@ -32,7 +32,7 @@ link() {
 }
 
 # ~/.config/<name>
-for entry in alacritty ghostty fish sioyek swayimg wallpapers; do
+for entry in ghostty fish swayimg zathura; do
   link "$SYSTEM_DIR/$entry" "$HOME/.config/$entry"
 done
 

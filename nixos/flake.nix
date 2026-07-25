@@ -17,7 +17,6 @@
         ./packages.nix
         ./users.nix
         ./environment.nix
-
         {
           # Hardware
           hardware.enableRedistributableFirmware = true;

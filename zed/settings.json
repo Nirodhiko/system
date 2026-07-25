@@ -80,7 +80,9 @@
         "search.nixos.org",
         "github.com",
         "api.nixos.org",
-        "ghostty.org"
+        "ghostty.org",
+        "pwmt.org",
+        "manpages.debian.org"
       ]
     },
     "tool_permissions": {
@@ -105,7 +107,7 @@
     "default_profile": "write",
     "sidebar_side": "right",
     "default_model": {
-      "effort": "max",
+      "effort": "high",
       "provider": "deepseek",
       "model": "deepseek-v4-pro",
       "enable_thinking": true,
