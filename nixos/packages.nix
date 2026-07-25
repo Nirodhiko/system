@@ -20,7 +20,6 @@
     swappy
     grim
     slurp
-    swayimg
     brightnessctl
 
     # Terminal & shell tools
