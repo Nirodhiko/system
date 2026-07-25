@@ -1,5 +1,5 @@
 [user]
-  name = Niro
+	name = Niro
 	email = nirodhiko@outlook.com
 [core]
   editor = nano
@@ -13,3 +13,8 @@
   sslverify = false
 ; [credential]
   ; helper = gopass
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

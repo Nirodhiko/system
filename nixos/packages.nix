@@ -54,6 +54,7 @@
     # Apps
     google-chrome
     wechat-uos
+    gitui
     onlyoffice-desktopeditors
     zapzap
     inkscape
