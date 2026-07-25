@@ -59,9 +59,9 @@
     zapzap
     inkscape
     sigil
-    foliate
-    sioyek
     zathura
+    zathuraPkgs.zathura_pdf_mupdf
+    sqlite # for zathura
     goldendict-ng
     typora
   ];

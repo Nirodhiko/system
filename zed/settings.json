@@ -82,7 +82,8 @@
         "api.nixos.org",
         "ghostty.org",
         "pwmt.org",
-        "manpages.debian.org"
+        "manpages.debian.org",
+        "api.github.com"
       ]
     },
     "tool_permissions": {

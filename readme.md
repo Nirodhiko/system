@@ -21,3 +21,6 @@ sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
 
 ## Goldendict
 - shortcut: sh -c 'goldendict "$(wl-paste --primary)"'
+
+## Zathura
+- /home/niro/.config/zathura/zlast.sh: Must using absolute path when binding to the keybinding of Gnome.
