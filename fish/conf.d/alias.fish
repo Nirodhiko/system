@@ -24,11 +24,6 @@ abbr -a pc -- pnpm store prune
 abbr -a v  -- zeditor
 abbr -a sv -- sudo -E zeditor
 
-# image
-abbr -a iv -- swayimg
-abbr -a is -- grimshot save area ~/Pictures/last.png
-abbr -a ie -- swappy -f ~/Pictures/last.png -o ~/Pictures/last.png
-
 # system
 abbr -a disk -- ncdu
 abbr -a ss -- fastfetch
@@ -38,30 +33,15 @@ abbr -a sl -- journalctl -b 0 -p 4
 # nixos
 abbr -a nr -- sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
 abbr -a nt -- nixos-rebuild test --flake $HOME/system/nixos#nixos
+abbr -a nu -- nix flake update
 abbr -a no -- nix store optimise
-abbr -a nu -- sudo nix-channel update
-
-# niri
-abbr -a nw -- niri msg windows
+abbr -a nc -- sudo nix-collect-garbage -d
 
 # usb
 abbr -a us -- udisksctl status
 abbr -a um -- udisksctl mount -b /dev/sda1
 abbr -a uu -- udisksctl unmount -b /dev/sda1
 
-# wifi and wireguard
-abbr -a wo -- nmcli device wifi on
-abbr -a wl -- nmcli device wifi list
-abbr -a wc -- nmcli device wifi connect
+# wireguard
 abbr -a wu -- sudo wg-quick up $HOME/.config/wireguard/peer_A.conf
 abbr -a wd -- sudo wg-quick down $HOME/.config/wireguard/peer_A.conf
-
-# file manager
-function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	command yazi $argv --cwd-file="$tmp"
-	if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
-		builtin cd -- "$cwd"
-	end
-	command rm -f -- "$tmp"
-end

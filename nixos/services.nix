@@ -42,6 +42,14 @@
     };
   };
 
+  # Printing
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
   # Input method: fcitx5 with Rime
   i18n.inputMethod = {
     enable = true;

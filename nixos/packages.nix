@@ -64,6 +64,6 @@
     sqlite # for zathura
     goldendict-ng
     typora
-    geary
+    thunderbird
   ];
 }
