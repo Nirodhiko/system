@@ -38,7 +38,6 @@
 
     # Video
     mpv
-    celluloid
 
     # GNOME extensions
     gnomeExtensions.hide-cursor
@@ -64,5 +63,6 @@
     sqlite # for zathura
     goldendict-ng
     typora
+    geary
   ];
 }

@@ -1,6 +1,6 @@
 theme = Ayu Light
 
-fullscreen = false
+fullscreen = true
 window-padding-x = 15
 shell-integration = fish
 shell-integration-features = no-cursor
@@ -22,3 +22,5 @@ keybind = ctrl+shift+l=next_tab
 
 keybind = ctrl+shift+n=new_split:right
 keybind = ctrl+shift+p=goto_split:left
+
+keybind = f11=toggle_fullscreen
