@@ -64,5 +64,6 @@
     goldendict-ng
     typora
     thunderbird
+    # davinci-resolve # video editor, need GPU.
   ];
 }
