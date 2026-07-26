@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -51,6 +51,7 @@
     gnome-tweaks
 
     # Apps
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     google-chrome
     wechat-uos
     gitui

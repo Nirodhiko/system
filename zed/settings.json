@@ -83,7 +83,9 @@
         "ghostty.org",
         "pwmt.org",
         "manpages.debian.org",
-        "api.github.com"
+        "api.github.com",
+        "zen-browser.app",
+        "lazamar.co.uk"
       ]
     },
     "tool_permissions": {

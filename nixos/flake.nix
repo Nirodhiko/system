@@ -3,6 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      # recommended if you track nixpkgs-unstable — shares system libs,
+      # improves startup time, and avoids build failures
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {

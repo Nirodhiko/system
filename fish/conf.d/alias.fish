@@ -37,6 +37,10 @@ abbr -a nu -- nix flake update
 abbr -a no -- nix store optimise
 abbr -a nc -- sudo nix-collect-garbage -d
 
+# audio
+abbr -a au -- wpctl set-volume @DEFAULT_AUDIO_SINK@ 20%+
+abbr -a ad -- wpctl set-volume @DEFAULT_AUDIO_SINK@ 20%-
+
 # wireguard
 abbr -a wu -- sudo wg-quick up $HOME/.config/wireguard/peer_A.conf
 abbr -a wd -- sudo wg-quick down $HOME/.config/wireguard/peer_A.conf
