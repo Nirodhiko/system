@@ -35,9 +35,6 @@
     unrar
     p7zip
 
-    # Video
-    mpv
-
     # GNOME extensions
     gnomeExtensions.hide-cursor
     gnomeExtensions.blur-my-shell
@@ -68,5 +65,12 @@
     fragments
     pkgs.localsend
     # davinci-resolve # video editor, need GPU.
+  ];
+
+  # Remove unwanted GNOME default apps
+  environment.gnome.excludePackages = with pkgs; [
+    epiphany       # GNOME Web browser
+    gnome-console
+    gnome-tour     # GNOME Tour / Welcome app
   ];
 }
