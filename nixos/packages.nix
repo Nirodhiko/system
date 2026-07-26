@@ -65,6 +65,8 @@
     goldendict-ng
     typora
     thunderbird
+    fragments
+    pkgs.localsend
     # davinci-resolve # video editor, need GPU.
   ];
 }

@@ -30,6 +30,9 @@
           # Hostname & networking
           networking.hostName = "nixos";
           networking.networkmanager.enable = true;
+          # For localsend
+          networking.firewall.allowedTCPPorts = [ 53317 ];
+          networking.firewall.allowedUDPPorts = [ 53317 ];
 
           # Locale & time
           time.timeZone = "Asia/Karachi";
