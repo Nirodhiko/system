@@ -63,7 +63,8 @@
     typora
     thunderbird
     fragments
-    pkgs.localsend
+    localsend
+    gnome-feeds
     # davinci-resolve # video editor, need GPU.
   ];
 
