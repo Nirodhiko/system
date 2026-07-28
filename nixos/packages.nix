@@ -13,13 +13,9 @@
     python3
     python312Packages.pip
 
-    # Wayland session helpers
-    wev
+    # session helpers
     wl-clipboard
     xdotool
-    swappy
-    grim
-    slurp
     brightnessctl
 
     # Terminal & shell tools
@@ -65,6 +61,9 @@
     fragments
     localsend
     gnome-feeds
+    authenticator
+    wordbook
+    gradia
     # davinci-resolve # video editor, need GPU.
   ];
 
