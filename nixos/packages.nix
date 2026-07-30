@@ -22,7 +22,6 @@
     ghostty
     wireguard-tools
     wget
-    btop
     ncdu
     fastfetch
 
@@ -62,8 +61,8 @@
     localsend
     gnome-feeds
     authenticator
-    wordbook
     gradia
+    resources
     # davinci-resolve # video editor, need GPU.
   ];
 
