@@ -1,6 +1,17 @@
 # ai
 abbr -a ai -- opencode
 
+# audio
+abbr -a au -- wpctl set-volume @DEFAULT_AUDIO_SINK@ 20%+
+abbr -a ad -- wpctl set-volume @DEFAULT_AUDIO_SINK@ 20%-
+
+# rust
+abbr -a cn -- cargo new
+abbr -a cc -- cargo check
+abbr -a cb -- cargo build
+abbr -a cr -- cargo run
+abbr -a ct -- cargo test
+
 # docker
 abbr -a du -- docker compose up -d
 abbr -a ds -- docker compose stop
@@ -22,10 +33,10 @@ abbr -a pc -- pnpm store prune
 
 # zed
 abbr -a v  -- zeditor
-abbr -a sv -- sudo -E zeditor
+abbr -a vv -- sudo -E zeditor
 
 # system
-abbr -a disk -- ncdu
+abbr -a sd -- ncdu
 abbr -a ss -- fastfetch
 abbr -a si -- btop
 abbr -a sl -- journalctl -b 0 -p 4
@@ -36,10 +47,6 @@ abbr -a nt -- nixos-rebuild test --flake $HOME/system/nixos#nixos
 abbr -a nu -- nix flake update
 abbr -a no -- nix store optimise
 abbr -a nc -- sudo nix-collect-garbage -d
-
-# audio
-abbr -a au -- wpctl set-volume @DEFAULT_AUDIO_SINK@ 20%+
-abbr -a ad -- wpctl set-volume @DEFAULT_AUDIO_SINK@ 20%-
 
 # wireguard
 abbr -a wu -- sudo wg-quick up $HOME/.config/wireguard/peer_A.conf

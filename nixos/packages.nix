@@ -12,6 +12,8 @@
     zed-editor
     python3
     python312Packages.pip
+    rustup
+    gcc
 
     # session helpers
     wl-clipboard
