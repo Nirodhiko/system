@@ -22,5 +22,10 @@ sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
 ## Goldendict
 - Disable goldendict scan function.
 - Shortcut: sh -c 'goldendict "$(wl-paste --primary)" && wl-copy --clear'
+ 
 ## Zathura
 - /home/niro/.config/zathura/zlast.sh: Must using absolute path when binding to the keybinding of Gnome.
+
+## GNOME backup and restore
+- dconf dump /org/gnome/ > ~/gnome-settings-backup.dconf
+- dconf load /org/gnome/ < ~/gnome-settings-backup.dconf

@@ -112,7 +112,7 @@
     "default_model": {
       "effort": "high",
       "provider": "deepseek",
-      "model": "deepseek-v4-flash",
+      "model": "deepseek-v4-pro",
       "enable_thinking": true,
     },
     "dock": "right",
@@ -134,7 +134,7 @@
   "theme": {
     "mode": "dark",
     "light": "Dracula Light (Alucard",
-    "dark": "Blade Runner 2049 Dark User Imput",
+    "dark": "Catppuccin Macchiato",
   },
   "languages": {
     "Nix": {
