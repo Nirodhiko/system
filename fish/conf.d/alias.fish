@@ -7,10 +7,10 @@ abbr -a ad -- wpctl set-volume @DEFAULT_AUDIO_SINK@ 20%-
 
 # rust
 abbr -a cn -- cargo new
-abbr -a cc -- cargo check
-abbr -a cb -- cargo build
-abbr -a cr -- cargo run
-abbr -a ct -- cargo test
+abbr -a cc -- cargo watch -x check
+abbr -a cb -- cargo watch -x build
+abbr -a cr -- cargo watch -x run
+abbr -a ct -- cargo watch -x test
 
 # docker
 abbr -a du -- docker compose up -d

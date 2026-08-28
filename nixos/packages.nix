@@ -13,6 +13,7 @@
     python3
     python312Packages.pip
     rustup
+    cargo-watch
     gcc
 
     # session helpers
@@ -46,7 +47,6 @@
 
     # Apps
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    google-chrome
     wechat-uos
     gitui
     onlyoffice-desktopeditors
