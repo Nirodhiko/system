@@ -9,6 +9,9 @@
       "wheel"
       "docker"
       "video"
+      "audio"
+      "camera"
+      "lpadmin"
     ];
     shell = pkgs.fish;
   };

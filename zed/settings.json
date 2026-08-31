@@ -85,7 +85,9 @@
         "manpages.debian.org",
         "api.github.com",
         "zen-browser.app",
-        "lazamar.co.uk"
+        "lazamar.co.uk",
+        "www.cups.org",
+        "wiki.archlinux.org"
       ]
     },
     "tool_permissions": {
