@@ -1,6 +1,9 @@
 # ===== database =====
 set database "sqlite"
 
+# ===== pages per row =====
+set pages-per-row 1
+
 # ===== recolor =====
 set recolor              true
 set recolor-lightcolor   "#FAF3E0"
