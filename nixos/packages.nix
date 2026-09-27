@@ -45,6 +45,7 @@
     gnome-tweaks
     bibata-cursors        # cursor theme
     reversal-icon-theme   # icon theme
+    whitesur-gtk-theme    # GTK + GNOME Shell theme (WhiteSur-Light / -Dark)
 
     # Apps
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
