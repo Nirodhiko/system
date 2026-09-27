@@ -10,6 +10,7 @@
   services.desktopManager.gnome.enable = true;
 
   programs.git.enable = true;
+  programs.amnezia-vpn.enable = true;
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs.obs-studio-plugins; [

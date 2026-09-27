@@ -42,8 +42,10 @@
     gnomeExtensions.just-perfection
     gnomeExtensions.user-themes
 
-    # GNOME tools
+    # GNOME
     gnome-tweaks
+    bibata-cursors        # cursor theme
+    reversal-icon-theme   # icon theme
 
     # Apps
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default

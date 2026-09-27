@@ -114,7 +114,7 @@
     "default_model": {
       "effort": "high",
       "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "model": "deepseek-flash",
       "enable_thinking": true,
     },
     "dock": "right",

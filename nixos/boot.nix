@@ -6,6 +6,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   # Hide the systemd-boot menu entirely (hold a key during boot to show it).
   boot.loader.timeout = 2;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Fully silent boot & shutdown — black screen, no text, no cursor, no splash.
   boot.kernelParams = [
