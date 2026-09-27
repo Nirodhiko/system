@@ -8,6 +8,7 @@
       noto-fonts-color-emoji
       nerd-fonts.fira-code
       fira-code-symbols
+      poppins
       # Custom fonts — drop .ttf/.otf/.ttc files into ./fonts/ (system/fonts)
       (pkgs.runCommand "custom-fonts" { } ''
         mkdir -p $out/share/fonts/truetype $out/share/fonts/opentype

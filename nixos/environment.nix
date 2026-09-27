@@ -11,5 +11,7 @@
     # Set default editor
     EDITOR        = "zeditor";
     VISUAL        = "zeditor";
+    # Native Wayland for Chromium/Electron apps (Chrome, etc.)
+    NIXOS_OZONE_WL = "1";
   };
 }
