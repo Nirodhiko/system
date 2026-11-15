@@ -2,7 +2,9 @@
 nix flake update
 
 ## NixOS rebuild
-sudo nixos-rebuild switch --flake $HOME/system/nixos#nixos
+sudo nixos-rebuild build --flake $HOME/system/nixos#nixos
+sudo nixos-rebuild boot --flake $HOME/system/nixos#nixos
+sudo reboot
 
 ## Fix onlyoffice-desktopeditors bug 
 - Copying custom fonts to .local/share/fonts.
