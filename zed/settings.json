@@ -114,11 +114,7 @@
     "default_model": {
       "effort": "high",
       "provider": "deepseek",
-<<<<<<< HEAD
-      "model": "deepseek-flash",
-=======
       "model": "deepseek-v4-flash",
->>>>>>> 2700197 (Update flake inputs and adjust Zed theme and model)
       "enable_thinking": true,
     },
     "dock": "right",
