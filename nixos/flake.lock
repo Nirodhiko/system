@@ -2,19 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1790323409,
-        "narHash": "sha256-VVTPf+Hyd5ebpjBMHmrLMSBIeW6ls48Bqtosj7CNKLA=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "e94cb152ed51bd6e24eb4a41f1460252beb52cd2",
-=======
         "lastModified": 1790185690,
         "narHash": "sha256-xJ+X4hBtOcAFGBOe5nAMyMUeF9foJBmIOu3NjBqBycU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "4975466d324710c576dc11ad614684e6bd8cad8e",
->>>>>>> 2700197 (Update flake inputs and adjust Zed theme and model)
         "type": "github"
       },
       "original": {
