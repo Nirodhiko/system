@@ -38,7 +38,7 @@ window-maximized=true
 is-maximized=false
 
 [Snapshot]
-capture-mode='picture'
+capture-mode='qr-detection'
 is-maximized=false
 window-height=640
 window-width=800
@@ -63,13 +63,17 @@ active-view='month'
 window-maximized=true
 window-size=(768, 600)
 
+[clocks]
+timers=[{'duration': <120>, 'name': <''>}]
+world-clocks=[{'location': <(uint32 2, <('Karachi', 'OPKC', true, [(0.43458698374658805, 1.1716976986877623)], [(0.43400521314702073, 1.170243263462198)])>)>}]
+
 [clocks/state/window]
 maximized=false
 panel-id='world'
 size=(870, 690)
 
 [control-center]
-last-panel='keyboard'
+last-panel='online-accounts'
 window-state=(980, 640, true)
 
 [desktop/a11y/magnifier]
@@ -101,10 +105,10 @@ translate=true
 [desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/niro/.local/share/backgrounds/2026-08-11-18-34-53-amanea_corsica.jpg'
-picture-uri-dark='file:///home/niro/.local/share/backgrounds/2026-08-11-18-34-53-amanea_corsica.jpg'
-primary-color='#000000000000'
-secondary-color='#000000000000'
+picture-uri='file:///run/current-system/sw/share/backgrounds/gnome/balls-l.jxl'
+picture-uri-dark='file:///run/current-system/sw/share/backgrounds/gnome/balls-d.jxl'
+primary-color='#3C3635'
+secondary-color='#E4DAC4'
 
 [desktop/break-reminders/eyesight]
 play-sound=true
@@ -122,9 +126,9 @@ sources=[('xkb', 'us')]
 xkb-options=['terminate:ctrl_alt_bksp']
 
 [desktop/interface]
-accent-color='green'
-color-scheme='default'
-cursor-theme='Bibata-Modern-Ice'
+accent-color='blue'
+color-scheme='prefer-dark'
+cursor-theme='Bibata-Original-Amber'
 document-font-name='Poppins 12'
 enable-animations=true
 font-name='Poppins 11'
@@ -136,7 +140,9 @@ show-battery-percentage=false
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-about-panel', 'gnome-power-panel', 'org-gnome-nautilus', 'org-gnome-tweaks', 'io-github-xiaoyifang-goldendict-ng', 'google-chrome', 'org-gnome-texteditor', 'com-tencent-wechat', 'org-gnome-showtime', 'io-github-celluloid-player-celluloid', 'org-gnome-evolution', 'github-desktop', 'thunderbird', 'zen', 'dev-zed-zed', 'org-gnome-settings']
+application-children=['gnome-about-panel', 'gnome-power-panel', 'org-gnome-nautilus', 'org-gnome-tweaks', 'io-github-xiaoyifang-goldendict-ng', 'google-chrome', 'org-gnome-texteditor', 'com-tencent-wechat', 'org-gnome-showtime', 'io-github-celluloid-player-celluloid', 'org-gnome-evolution', 'github-desktop', 'thunderbird', 'zen', 'dev-zed-zed', 'org-gnome-settings', 'org-gnome-decibels', 'org-gnome-music', 'org-gnome-goa-daemon']
+show-banners=false
+show-in-lock-screen=false
 
 [desktop/notifications/application/com-tencent-wechat]
 application-id='com.tencent.wechat.desktop'
@@ -162,8 +168,17 @@ application-id='io.github.celluloid_player.Celluloid.desktop'
 [desktop/notifications/application/io-github-xiaoyifang-goldendict-ng]
 application-id='io.github.xiaoyifang.goldendict_ng.desktop'
 
+[desktop/notifications/application/org-gnome-decibels]
+application-id='org.gnome.Decibels.desktop'
+
 [desktop/notifications/application/org-gnome-evolution]
 application-id='org.gnome.Evolution.desktop'
+
+[desktop/notifications/application/org-gnome-goa-daemon]
+application-id='org.gnome.goa-daemon.desktop'
+
+[desktop/notifications/application/org-gnome-music]
+application-id='org.gnome.Music.desktop'
 
 [desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
@@ -189,6 +204,9 @@ application-id='zen.desktop'
 [desktop/peripherals/keyboard]
 numlock-state=true
 
+[desktop/peripherals/mouse]
+left-handed=false
+
 [desktop/peripherals/touchpad]
 edge-scrolling-enabled=false
 speed=0.53648068669527893
@@ -197,9 +215,9 @@ two-finger-scrolling-enabled=true
 [desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/niro/.local/share/backgrounds/2026-08-11-18-34-53-amanea_corsica.jpg'
-primary-color='#000000000000'
-secondary-color='#000000000000'
+picture-uri='file:///run/current-system/sw/share/backgrounds/gnome/balls-l.jxl'
+primary-color='#3C3635'
+secondary-color='#E4DAC4'
 
 [desktop/search-providers]
 enabled=['org.gnome.Weather.desktop']
@@ -372,23 +390,31 @@ search-pattern-hex=@as []
 search-pattern-text=@as []
 
 [gnome-system-monitor]
-current-tab='processes'
+current-tab='disks'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
 window-height=720
 window-width=800
 
+[gnome-system-monitor/disksview]
+sort-col='directory'
+sort-order=1
+
 [gnome-system-monitor/proctree]
 col-26-visible=false
 col-26-width=0
 
+[login-screen]
+enable-smartcard-authentication=false
+enable-switchable-authentication=false
+
 [maps]
-last-viewed-location=[25.902806481732952, 116.07303957235649]
+last-viewed-location=[24.860584144914299, 67.010402027507013]
 map-type='MapsVectorSource'
 transportation-type='pedestrian'
 window-maximized=true
-zoom-level=15
+zoom-level=18
 
 [mutter]
 dynamic-workspaces=false
@@ -397,7 +423,7 @@ dynamic-workspaces=false
 migrated-gtk-settings=true
 
 [nautilus/window-state]
-initial-size=(1024, 882)
+initial-size=(1024, 656)
 initial-size-file-chooser=(890, 550)
 maximized=false
 
@@ -417,7 +443,7 @@ pen-color='blue'
 pen-stroke=1.0
 show-sidebar=true
 sidebar-page='links'
-sizing-mode='free'
+sizing-mode='fit-width'
 text-color='red'
 window-height=960
 window-maximized=true
@@ -433,7 +459,10 @@ last-folder-path='/home/niro/Pictures'
 last-folder-path='/home/niro/system'
 
 [portal/filechooser/org.gnome.Settings]
-last-folder-path='/home/niro/Documents/wallpaper/linux_mint_wallpaper-main/linux_mint_21/backgrounds/linuxmint'
+last-folder-path='/home/niro/Documents/wallpaper/linux_mint_wallpaper-main/linux_mint_first/backgrounds'
+
+[portal/filechooser/thunderbird]
+last-folder-path='/home/niro/Downloads/装柜照片 and others (total 20)'
 
 [portal/filechooser/typora]
 last-folder-path='/home/niro'
@@ -442,12 +471,12 @@ last-folder-path='/home/niro'
 last-folder-path='/home/niro/Downloads'
 
 [settings-daemon/plugins/color]
-night-light-enabled=false
-night-light-last-coordinates=(24.852529719355399, 67.010400000000004)
+night-light-enabled=true
+night-light-last-coordinates=(24.857431543990781, 67.001099999999994)
 night-light-schedule-automatic=true
 
 [settings-daemon/plugins/housekeeping]
-donation-reminder-last-shown=int64 1784730471468372
+donation-reminder-last-shown=int64 1795412210050749
 
 [settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/']
@@ -489,40 +518,45 @@ command='gradia'
 name='image'
 
 [settings-daemon/plugins/power]
+idle-dim=true
+power-saver-profile-on-low-battery=true
 sleep-inactive-ac-timeout=3600
 sleep-inactive-battery-timeout=3600
 
 [shell]
-app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.gnome.Weather.desktop': <{'position': <1>}>, 'org.gnome.clocks.desktop': <{'position': <2>}>, 'org.gnome.Maps.desktop': <{'position': <3>}>, 'org.gnome.Music.desktop': <{'position': <4>}>, 'org.gnome.SimpleScan.desktop': <{'position': <5>}>, 'org.gnome.Calculator.desktop': <{'position': <6>}>, 'org.gnome.Calendar.desktop': <{'position': <7>}>, 'org.gnome.Showtime.desktop': <{'position': <8>}>, 'org.gnome.Snapshot.desktop': <{'position': <9>}>, 'org.gnome.Characters.desktop': <{'position': <10>}>, 'Utilities': <{'position': <11>}>, 'System': <{'position': <12>}>, 'org.gnome.Yelp.desktop': <{'position': <13>}>, 'org.fcitx.Fcitx5.desktop': <{'position': <14>}>, 'fcitx5-configtool.desktop': <{'position': <15>}>, 'org.fcitx.fcitx5-migrator.desktop': <{'position': <16>}>, 'org.inkscape.Inkscape.desktop': <{'position': <17>}>}, {'kbd-layout-viewer5.desktop': <{'position': <0>}>, 'nixos-manual.desktop': <{'position': <1>}>, 'com.obsproject.Studio.desktop': <{'position': <2>}>, 'sigil.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'com.rtosta.zapzap.desktop': <{'position': <5>}>, 'org.gnome.Extensions.desktop': <{'position': <6>}>, 'LocalSend.desktop': <{'position': <7>}>, 'org.gnome.Settings.desktop': <{'position': <8>}>, 'cups.desktop': <{'position': <9>}>, 'de.haeckerfelix.Fragments.desktop': <{'position': <10>}>, 'com.belmoussaoui.Authenticator.desktop': <{'position': <11>}>, 'be.alexandervanhee.gradia.desktop': <{'position': <12>}>, 'net.nokyan.Resources.desktop': <{'position': <13>}>}]
-disabled-extensions=['rounded-window-corners@fxgn']
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'burn-my-windows@schneegans.github.com', 'just-perfection-desktop@just-perfection', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'blur-my-shell@aunetx', 'hide-cursor@elcste.com', 'gsconnect@andyholmes.github.io']
-favorite-apps=['zen.desktop', 'dev.zed.Zed.desktop', 'com.mitchellh.ghostty.desktop', 'com.tencent.wechat.desktop', 'io.github.xiaoyifang.goldendict_ng.desktop', 'org.gnome.Nautilus.desktop', 'org.pwmt.zathura.desktop', 'thunderbird.desktop', 'typora.desktop', 'onlyoffice-desktopeditors.desktop', 'org.gabmus.gfeeds.desktop']
+app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.gnome.Weather.desktop': <{'position': <1>}>, 'org.gnome.clocks.desktop': <{'position': <2>}>, 'org.gnome.Maps.desktop': <{'position': <3>}>, 'org.gnome.Music.desktop': <{'position': <4>}>, 'org.gnome.SimpleScan.desktop': <{'position': <5>}>, 'org.gnome.Calculator.desktop': <{'position': <6>}>, 'org.gnome.Calendar.desktop': <{'position': <7>}>, 'org.gnome.Showtime.desktop': <{'position': <8>}>, 'org.gnome.Snapshot.desktop': <{'position': <9>}>, 'org.gnome.Characters.desktop': <{'position': <10>}>, 'Utilities': <{'position': <11>}>, 'System': <{'position': <12>}>, 'org.gnome.Yelp.desktop': <{'position': <13>}>, 'fcitx5-configtool.desktop': <{'position': <14>}>, 'org.fcitx.fcitx5-migrator.desktop': <{'position': <15>}>, 'org.inkscape.Inkscape.desktop': <{'position': <16>}>}, {'kbd-layout-viewer5.desktop': <{'position': <0>}>, 'nixos-manual.desktop': <{'position': <1>}>, 'com.obsproject.Studio.desktop': <{'position': <2>}>, 'sigil.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'com.rtosta.zapzap.desktop': <{'position': <5>}>, 'org.gnome.Extensions.desktop': <{'position': <6>}>, 'LocalSend.desktop': <{'position': <7>}>, 'org.gnome.Settings.desktop': <{'position': <8>}>, 'cups.desktop': <{'position': <9>}>, 'de.haeckerfelix.Fragments.desktop': <{'position': <10>}>, 'com.belmoussaoui.Authenticator.desktop': <{'position': <11>}>, 'be.alexandervanhee.gradia.desktop': <{'position': <12>}>, 'AmneziaVPN.desktop': <{'position': <13>}>, 'org.gabmus.gfeeds.desktop': <{'position': <14>}>, 'btop.desktop': <{'position': <15>}>, 'google-chrome.desktop': <{'position': <16>}>, 'org.gnome.Resources.desktop': <{'position': <17>}>}]
+command-history=['r']
+disabled-extensions=['rounded-window-corners@fxgn', 'just-perfection-desktop@just-perfection']
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'burn-my-windows@schneegans.github.com', 'hide-cursor@elcste.com', 'gsconnect@andyholmes.github.io', 'blur-my-shell@aunetx', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'hidetopbar@mathieu.bidon.ca']
+favorite-apps=['zen.desktop', 'dev.zed.Zed.desktop', 'com.mitchellh.ghostty.desktop', 'com.tencent.wechat.desktop', 'io.github.xiaoyifang.goldendict_ng.desktop', 'org.gnome.Nautilus.desktop', 'org.pwmt.zathura.desktop', 'thunderbird.desktop', 'typora.desktop', 'onlyoffice-desktopeditors.desktop', 'goose-desktop.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='50.2'
 
 [shell/extensions/blur-my-shell]
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_000000000000'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_liquid_glass': {'name': <'Liquid Glass'>, 'effects': <[<{'type': <'luminosity'>, 'id': <'effect_liquid_glass_luminosity'>, 'params': <{'saturation_multiplicator': <1.1000000000000001>}>}>, <{'type': <'refraction'>, 'id': <'effect_liquid_glass_refraction'>, 'params': <{'tint': <0>}>}>, <{'type': <'noise'>, 'id': <'effect_liquid_glass_noise'>, 'params': <{'noise': <0.10000000000000001>}>}>]>}, 'pipeline_vapor_glass': {'name': <'Vapor Glass'>, 'effects': <[<{'type': <'luminosity'>, 'id': <'effect_vapor_glass_luminosity'>, 'params': <{'saturation_multiplicator': <1.1000000000000001>}>}>, <{'type': <'wave'>, 'id': <'effect_vapor_glass_wave'>, 'params': <@a{sv} {}>}>, <{'type': <'refraction'>, 'id': <'effect_vapor_glass_refraction'>, 'params': <{'tint': <0>}>}>, <{'type': <'noise'>, 'id': <'effect_vapor_glass_noise'>, 'params': <{'noise': <0.10000000000000001>}>}>]>}, 'pipeline_classic_light_background': {'name': <'Classic Light Background'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_classic_light_blur'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'color'>, 'id': <'effect_classic_light_color'>, 'params': <{'color': <(1.0, 1.0, 1.0, 0.25)>, 'blend_mode': <17>}>}>]>}, 'pipeline_classic_dark_background': {'name': <'Classic Dark Background'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_classic_dark_blur'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'color'>, 'id': <'effect_classic_dark_color'>, 'params': <{'color': <(0.40000000000000002, 0.40000000000000002, 0.40000000000000002, 0.34999999999999998)>, 'blend_mode': <17>}>}>]>}, 'pipeline_migrated_dynamic_blur': {'name': <'Migrated dynamic blur'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_migrated_dynamic_blur'>, 'params': <{'unscaled_radius': <60>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_default_light': {'name': <'Default (Light mode)'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_default_light_blur'>, 'params': <{'unscaled_radius': <30>, 'brightness': <1>}>}>, <{'type': <'color'>, 'id': <'effect_default_light_color'>, 'params': <{'color': <(1.0, 1.0, 1.0, 0.5)>, 'blend_mode': <3>}>}>]>}}
 rounded-blur-found=false
-settings-version=2
+settings-version=10
 
 [shell/extensions/blur-my-shell/appfolder]
-brightness=0.59999999999999998
-sigma=30
+pipeline='pipeline_migrated_dynamic_blur'
+
+[shell/extensions/blur-my-shell/applications]
+blur=false
+pipeline='pipeline_default'
 
 [shell/extensions/blur-my-shell/dash-to-dock]
 blur=true
-brightness=0.59999999999999998
-sigma=30
 static-blur=true
 style-dash-to-dock=0
 
 [shell/extensions/blur-my-shell/panel]
-brightness=0.59999999999999998
 corner-radius=0
-sigma=30
+
+[shell/extensions/blur-my-shell/popup]
+screenshot-corner-radius=36
 
 [shell/extensions/blur-my-shell/window-list]
-brightness=0.59999999999999998
-sigma=30
+pipeline='pipeline_migrated_dynamic_blur'
 
 [shell/extensions/burn-my-windows]
 active-profile='/home/niro/.config/burn-my-windows/profiles/1784727872017158.conf'
@@ -549,11 +583,40 @@ devices=@as []
 missing-openssl=false
 name='nixos'
 
+[shell/extensions/hidetopbar]
+enable-active-window=false
+enable-intellihide=false
+mouse-sensitive=true
+show-in-overview=true
+
 [shell/extensions/just-perfection]
+accessibility-menu=true
+background-menu=true
+controls-manager-spacing-size=0
+dash=true
+dash-icon-size=0
+double-super-to-appgrid=true
+osd=true
+overlay-key=true
 panel=false
 panel-in-overview=true
+ripple-box=true
+search=true
+show-apps-button=true
+startup-status=1
 support-notifier-showed-version=36
 support-notifier-type=0
+theme=true
+window-demands-attention-focus=false
+window-picker-icon=true
+window-preview-caption=true
+window-preview-close-button=true
+workspace=true
+workspace-background-corner-size=0
+workspace-popup=true
+workspace-thumbnail-to-main-view=false
+workspace-wrap-around=false
+workspaces-in-app-grid=true
 
 [shell/extensions/rounded-window-corners-reborn]
 border-width=0
@@ -565,7 +628,7 @@ skip-libadwaita-app=false
 hide-window-titlebars='always'
 
 [shell/extensions/user-theme]
-name=''
+name='WhiteSur-Light'
 
 [shell/keybindings]
 toggle-message-tray=@as []
@@ -577,7 +640,7 @@ automatic-location=true
 locations=[<(uint32 2, <('Karachi Airport', 'OPKC', false, [(0.43458698374658805, 1.1716976986877623)], @a(dd) [])>)>, <(uint32 2, <('Islamabad', 'OPRN', true, [(0.58672152269652456, 1.2758356832078548)], [(0.5881759579220891, 1.276999241860282)])>)>]
 
 [shell/world-clocks]
-locations=@av []
+locations=[<(uint32 2, <('Karachi', 'OPKC', true, [(0.43458698374658805, 1.1716976986877623)], [(0.43400521314702073, 1.170243263462198)])>)>]
 
 [system/location]
 enabled=true
