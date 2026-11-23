@@ -72,6 +72,9 @@
     "dock": "left",
   },
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "sandbox_permissions": {
       "network_hosts": [
         "wiki.nixos.org",
@@ -110,11 +113,10 @@
       },
     },
     "default_profile": "write",
-    "sidebar_side": "right",
     "default_model": {
       "effort": "high",
       "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "model": "deepseek-flash",
       "enable_thinking": true,
     },
     "dock": "right",

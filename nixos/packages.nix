@@ -3,7 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     # Ai
-    opencode
+    goose-cli      # Block's goose AI agent (CLI)
+    goose-desktop  # goose Desktop (Electron GUI, x86_64-linux only)
 
     # Dev tooling
     nixd # Nix language server for IDE support

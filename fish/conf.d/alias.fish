@@ -1,5 +1,5 @@
 # ai
-abbr -a ai -- opencode
+abbr -a ai -- goose
 
 # audio
 abbr -a au -- wpctl set-volume @DEFAULT_AUDIO_SINK@ 20%+
