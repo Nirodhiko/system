@@ -26,6 +26,7 @@
     wireguard-tools
     wget
     ncdu
+    btop
     fastfetch
 
     # Archives
@@ -39,7 +40,7 @@
     gnomeExtensions.burn-my-windows
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-dock
-    gnomeExtensions.just-perfection
+    gnomeExtensions.hide-top-bar
     gnomeExtensions.user-themes
 
     gnome-tweaks
