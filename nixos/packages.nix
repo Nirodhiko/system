@@ -1,4 +1,4 @@
-{ config, inputs, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -40,7 +40,15 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.burn-my-windows
     gnomeExtensions.appindicator
-    gnomeExtensions.dash-to-dock
+    # Pinned to v109 (nixpkgs ships v110). Drop the override to follow nixpkgs again.
+    (gnomeExtensions.dash-to-dock.overrideAttrs (old: {
+      version = "109";
+      src = fetchzip {
+        url = "https://github.com/ubuntu/dash-to-dock/releases/download/extensions.gnome.org-v109/dash-to-dock%40micxgx.gmail.com.zip";
+        hash = "sha256-HNMJQ5iXFkTdsnplmAMq0WLh+gRW9gasjSATcHtLGUo=";
+        stripRoot = false;
+      };
+    }))
     gnomeExtensions.hide-top-bar
     gnomeExtensions.user-themes
 
@@ -57,6 +65,7 @@
     onlyoffice-desktopeditors
     zapzap
     inkscape
+    blender
     sigil
     zathura
     zathuraPkgs.zathura_pdf_mupdf
